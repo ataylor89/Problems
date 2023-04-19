@@ -1,0 +1,21 @@
+March 31 2023
+
+Problem 1: Compute the following definite integral: 
+
+$$\int_{0}^{1} \frac{x^4(1 - x)^4}{1 + x^2} \ dx$$
+
+(Source: Putnam)
+
+Solution:
+
+We can expand the numerator and then do long division. This gives us
+
+\begin{align*}
+\int_{0}^{1} \frac{x^4(1 - x)^4}{1 + x^2} \ dx
+&= \int_{0}^{1} \left(x^6 - 4x^5 + 5x^4 - 4x^2 + 4 - \frac{4}{1 + x^2}\right) \ dx \\
+&= \left(\frac{x^7}{7} - \frac{2x^6}{3} + x^5 - \frac{4x^3}{3} + 4x - 4 \tan^{-1} x\right) \Bigg|_{0}^{1} \\
+&= \frac{1}{7} - \frac{2}{3} + 1 - \frac{4}{3} + 4 - 4 \cdot \frac{\pi}{4} \\
+&= \frac{1}{7} - \frac{6}{3} + 1 + 4 - \pi \\
+&= \frac{1}{7} + 3 - \pi \\
+&= \boxed{\frac{22}{7} - \pi}
+\end{align*}

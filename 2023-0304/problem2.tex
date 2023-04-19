@@ -1,0 +1,64 @@
+April 1 2023
+
+Problem 2: Prove that the polynomial
+$$(a-x)^6 -3a(a-x)^5 +\frac{5}{2} a^2 (a-x)^4 -\frac{1}{2} a^4 (a-x)^2$$ takes only negative values for $0<x<a$.
+
+(Source: Putnam 1941)
+
+Solution
+
+Let the polynomial $p(x)$ be defined as
+
+$$p(x) = (a-x)^6 -3a(a-x)^5 +\frac{5}{2} a^2 (a-x)^4 -\frac{1}{2} a^4 (a-x)^2$$
+
+We can start by factoring out $(a-x)^2$.
+
+\begin{align*}
+p(x) &= (a-x)^6 -3a(a-x)^5 +\frac{5}{2} a^2 (a-x)^4 -\frac{1}{2} a^4 (a-x)^2 \\
+&= (a-x)^2 \Bigg[(a-x)^4 - 3a(a-x)^3 + \frac{5}{2} a^2 (a-x)^2 - \frac{1}{2} a^4\Bigg]
+\end{align*}
+
+Now let's expand the expression in brackets.
+
+\begin{align*}
+p(x) &= (a-x)^2 \Bigg[a^4 - 4a^3x + 6a^2x^2 - 4ax^3 + x^4 \\
+& - 3a(a^3 - 3a^2x + 3ax^2 - x^3) \\
+& + \frac{5}{2}a^2(a^2 - 2ax + x^2) - \frac{1}{2}a^4 \Bigg] \\
+&= (a-x)^2 \Bigg[a^4 - 4a^3x + 6a^2x^2 - 4ax^3 + x^4 \\
+& - 3a^4 + 9a^3x - 9a^2x^2 + 3ax^3 \\
+& + \frac{5}{2}a^4 - 5a^3x + \frac{5}{2}a^2x^2 - \frac{1}{2}a^4 \Bigg] \\
+&= (a-x)^2 (x^4 - ax^3 + \frac{1}{2}a^2x^2) \\
+&= x^2 (a-x)^2 (x^2 - ax - \frac{1}{2}a^2)
+\end{align*}
+
+So far we have the result 
+
+$$p(x) = x^2 (a-x)^2 (x^2 - ax - \frac{1}{2}a^2)$$
+
+We can simplify this further. The quadratic formula allows us to get the roots of the quadratic.
+
+\begin{align*}
+x &= \frac{a \pm \sqrt{a^2 - 4 \left( \frac{-a^2}{2} \right)}}{2} \\
+&= \frac{a \pm \sqrt{3a^2}}{2} \\
+&= \frac{a \pm a\sqrt{3}}{2} \\
+&= \frac{a(1 \pm \sqrt{3})}{2} \\
+\end{align*}
+
+Let $r_1 = \dfrac{a(1 + \sqrt{3})}{2}$ and $r_2 = \dfrac{a(1 - \sqrt{3})}{2}$.
+
+We can factor $p(x)$ as such:
+
+$$p(x) = x^2 (a-x)^2 (x - r_1) (x - r_2)$$
+
+We want to show that $p(x)$ takes only negative values for $0 < x < a$.
+
+We can verify that $r1 > a$ and $r2 < 0$.
+
+\begin{align*}
+0 < x < a &\implies x^2 > 0 \\ 
+0 < x < a &\implies (a - x)^2 > 0 \\
+0 < x < a &\implies (x - r_1) < 0 \\ 
+0 < x < a &\implies (x - r_2) > 0
+\end{align*}
+
+When $0 < x < a$, the polynomial $p(x)$ becomes a product of three positive numbers and one negative number. Thus $p(x)$ only takes negative values when $0 < x < a$.

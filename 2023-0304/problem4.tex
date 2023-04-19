@@ -1,0 +1,34 @@
+Problem 4: Let $f(x)$ be a cubic polynomial and let $a > 0$ be a positive real number. Show that the average value of $f(x)$ on the interval $[-a, a]$ can be computed by taking the average of $f(\frac{a}{\sqrt3})$ and $f(-\frac{a}{\sqrt3})$.
+
+(Source: Putnam)
+
+Solution:
+
+We can write $f(x)$ as $f(x) = c_3x^3 + c_2x^2 + c_1x + c_0$.
+
+The average value of $f(x)$ on the interval $[-a, a]$ is given by
+
+\begin{align*}
+\frac{1}{2a} \int_{-a}^{a} f(x) \ dx &= \frac{1}{2a} \int_{-a}^{a} \left( c_3x^3 + c_2x^2 + c_1x + c_0 \right) \ dx \\ 
+&= \left( \frac{c_3}{8a} x^4 + \frac{c_2}{6a} x^3 + \frac{c_1}{4a} x^2 + \frac{c_0}{2a} x \right) \Bigg|_{-a}^{a} \\
+&= \left( \frac{c_3}{8a} a^4 + \frac{c_2}{6a} a^3 + \frac{c_1}{4a} a^2 + \frac{c_0}{2a} a \right) \\
+&- \left( \frac{c_3}{8a} a^4 - \frac{c_2}{6a} a^3 + \frac{c_1}{4a} a^2 - \frac{c_0}{2a} a \right) \\
+&= \frac{c_2}{3} a^2 + c_0
+\end{align*}
+
+Now let's calculate the average of $f(\frac{a}{\sqrt3})$ and $f(-\frac{a}{\sqrt3})$.
+
+\begin{align*}
+\frac{f(\frac{a}{\sqrt3}) + f(-\frac{a}{\sqrt3})}{2} &= \frac{1}{2} \Bigg( \frac{c_3}{3 \sqrt 3} a^3 + \frac{c_2}{3} a^2 + \frac{c_1}{\sqrt 3} a + c_0 \\
+&- \frac{c_3}{3 \sqrt 3} a^3 + \frac{c_2}{3} a^2 - \frac{c_1}{\sqrt 3} a + c_0 \Bigg) \\
+&= \frac{1}{2} \Bigg( \frac{2c_2}{3} a^2 + 2c_0 \Bigg) \\
+&= \frac{c_2}{3} a^2 + c_0
+\end{align*}
+
+Our work shows us that
+
+$$\frac{1}{2a} \int_{-a}^{a} f(x) \ dx = \frac{c_2}{3} a^2 + c_0 = \frac{f(\frac{a}{\sqrt3}) + f(-\frac{a}{\sqrt3})}{2}$$
+
+In other words, the average value of $f(x)$ on the interval $[-a, a]$ is equal to the average value of $f(\frac{a}{\sqrt3})$ and $f(-\frac{a}{\sqrt3})$. 
+
+QED
