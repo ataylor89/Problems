@@ -1,0 +1,37 @@
+Problem 6: Compute $$\int_0^1 \frac{1}{1 + x^2} \, dx$$
+
+Let $x = \tan \theta$. We will use the quotient rule to get the derivative of $\tan \theta$.
+
+$$ (fg)' = \frac{f'g - fg'}{g^2} \quad \quad \text{(Quotient rule)} $$
+
+Thus 
+
+$$ \frac{dx}{d\theta} = \frac{d}{d\theta} \left(\tan \theta\right) = \frac{\cos^2 \theta + \sin^2 \theta}{\cos^2 \theta} = \frac{1}{\cos^2 \theta} = \sec^2 \theta $$
+
+This means that $$ dx = \sec^2 \theta \, d\theta $$
+
+Substituting, we have
+
+$$\int \frac{1}{1 + x^2} \, dx = \int \frac{\sec^2 \theta}{1 + \tan^2 \theta} \, d\theta $$
+
+Note that $$ 1 + \tan^2 \theta = \frac{\cos^2 \theta}{\cos^2 \theta} + \frac{\sin^2 \theta}{\cos^2 \theta} = \frac{1}{\cos^2 \theta} = \sec^2 \theta $$
+
+Using this identity, we have
+
+$$\int \frac{1}{1 + x^2} \, dx = \int \frac{\sec^2 \theta}{1 + \tan^2 \theta} \, d\theta = \int \frac{\sec^2 \theta}{\sec^2 \theta} \, d\theta = \int 1 \, d\theta = \theta + C $$
+
+Now $$ x = \tan \theta \quad \implies \quad \theta = \arctan{x} $$
+
+Thus $$ \int \frac{1}{1 + x^2} \, dx = \arctan{x} + C $$
+
+We have found the antiderivative of our function. Now it's time to compute the definite integral.
+
+$$ \int_0^1 \frac{1}{1 + x^2} \, dx = \Bigg(\arctan{x} + C\Bigg) \Bigg|_0^1 = \arctan(1) - \arctan(0) = \frac{\pi}{4} - 0 = \boxed{\frac{\pi}{4}} $$
+
+To find this answer, we had to know the derivative of $\tan x$, the identity $1 + \tan^2 x = \sec^2 x$, and the method of integrating by substitution.
+
+Observe that the function 
+
+$$ f(x) = \frac{1}{1 + x^2} $$
+
+is continuous. It is an even function because $f(x) = f(-x)$. The maximum value of this function is 1.
