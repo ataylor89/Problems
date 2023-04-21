@@ -1,0 +1,19 @@
+Problem 9: The perimeter of a rectangle is 36 mm. What is the greatest possible area of the rectangle?
+
+(Source: Mathcounts 2023 State Sprint Exam)
+
+The perimeter of a rectangle is $2(a + b)$, where a and b are width and height of the rectangle. Thus
+
+$$ 2(a + b) = 36 $$
+
+We can divide both sides by 4 to get the arithmetic mean of a and b.
+
+$$ \frac{a + b}{2} = 9 $$
+
+Now we can use the AM-GM theorem, which says that the arithmetic mean is greater than or equal to the geometric mean, with equality if and only if $a = b$.
+
+$$ \frac{a + b}{2} \geq \sqrt{ab} \quad \implies \quad 9 \geq \sqrt{ab} \quad \implies \quad 81 \geq ab $$
+
+The product $ab$ is the area of the rectangle, and $ab = 81$ if and only if $a = b$. 
+
+Thus the greatest possible area of the rectangle is $\boxed{81 \, \text{mm}^2}$. The rectangle is a square with side length 9.
