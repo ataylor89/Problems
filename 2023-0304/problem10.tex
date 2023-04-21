@@ -1,0 +1,25 @@
+\usepackage{amsthm}
+
+Problem 10: Find $\lim_{x \rightarrow \infty} \dfrac{1}{x}$
+
+(Source: AoPS Calculus)
+
+Let $\epsilon > 0$. We want to find an N such that 
+
+$$ x > N \quad \implies \quad \Bigg|\frac{1}{x}\Bigg| < \epsilon $$
+
+Note that
+
+$$ \Bigg|\frac{1}{x}\Bigg| < \epsilon \quad \Leftrightarrow \quad |x| > \frac{1}{\epsilon} $$
+
+where the $\Leftrightarrow$ symbol means "if and only if".
+
+(We reverse the inequality after taking the reciprocal because both sides of the inequality have the same sign.)
+
+Let $N = \dfrac{1}{\epsilon}$. Then
+
+$$ x > N = \frac{1}{\epsilon} \quad \implies \quad \Bigg|\frac{1}{x}\Bigg| < \epsilon $$
+
+(Once again we reverse the inequality after taking the reciprocal, since both sides have the same sign.)
+
+This proves that $\lim_{x \rightarrow \infty} \dfrac{1}{x} = 0$. $\qedsymbol$
