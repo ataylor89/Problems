@@ -1,13 +1,11 @@
 \usepackage{amsthm}
 
-Problem 14: Prove that 
+Problem 14: Let f and g be real-valued functions with $\lim_{x \rightarrow a} f(x) = L$ and $\lim_{x \rightarrow a} g(x) = M$. Prove that
 
-$$ \lim_{x \rightarrow a} f(x) + g(x) = \lim_{x \rightarrow a} f(x) + \lim_{x \rightarrow a} g(x) $$
+$$ \lim_{x \rightarrow a} (f + g)(x) = L + M $$
 
 \begin{proof}
-Let $\epsilon > 0$. Let $\lim_{x \rightarrow a} f(x) = L$ and $\lim_{x \rightarrow a} g(x) = M$. 
-
-Then there exist $\delta_f$ and $\delta_g$ such that
+Let $\epsilon > 0$. Then there exist $\delta_f$ and $\delta_g$ such that
 
 \begin{align}
 & 0 < |x - a| < \delta_f \quad \implies \quad |f(x) - L| < \frac{\epsilon}{2} \\ 
@@ -31,6 +29,5 @@ $$ 0 < |x - a| < \delta \quad \implies \quad |f(x) + g(x) - (L + M)| \leq |f(x) 
 
 Thus
 
-$$ \lim_{x \rightarrow a} f(x) + g(x) = \lim_{x \rightarrow a} f(x) + \lim_{x \rightarrow a} g(x) $$
-
+$$ \lim_{x \rightarrow a} (f + g)(x) = L + M $$
 \end{proof}
