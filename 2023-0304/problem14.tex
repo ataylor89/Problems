@@ -1,0 +1,36 @@
+\usepackage{amsthm}
+
+Problem 14: Prove that 
+
+$$ \lim_{x \rightarrow a} f(x) + g(x) = \lim_{x \rightarrow a} f(x) + \lim_{x \rightarrow a} g(x) $$
+
+\begin{proof}
+Let $\epsilon > 0$. Let $\lim_{x \rightarrow a} f(x) = L$ and $\lim_{x \rightarrow a} g(x) = M$. 
+
+Then there exist $\delta_f$ and $\delta_g$ such that
+
+\begin{align}
+& 0 < |x - a| < \delta_f \quad \implies \quad |f(x) - L| < \frac{\epsilon}{2} \\ 
+& 0 < |x - a| < \delta_g \quad \implies \quad |g(x) - M| < \frac{\epsilon}{2}
+\end{align}
+
+Let $\delta = \min(\delta_f, \delta_g)$. Then
+
+\begin{align}
+& 0 < |x - a| < \delta \quad \implies \quad |f(x) - L| < \frac{\epsilon}{2} \\ 
+& 0 < |x - a| < \delta \quad \implies \quad |g(x) - M| < \frac{\epsilon}{2}
+\end{align}
+
+We can add the inequalities on the right.
+
+$$ 0 < |x - a| < \delta \quad \implies \quad |f(x) - L| + |g(x) - M| < \epsilon $$
+
+Now we can use the triangle inequality. By the triangle inequality,
+
+$$ 0 < |x - a| < \delta \quad \implies \quad |f(x) + g(x) - (L + M)| \leq |f(x) - L| + |g(x) - M| < \epsilon $$
+
+Thus
+
+$$ \lim_{x \rightarrow a} f(x) + g(x) = \lim_{x \rightarrow a} f(x) + \lim_{x \rightarrow a} g(x) $$
+
+\end{proof}
