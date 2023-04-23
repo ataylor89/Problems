@@ -5,7 +5,11 @@ Problem 15: Let f be a real-valued function with $\lim_{x \rightarrow a} f(x) = 
 $$ \lim_{x \rightarrow a} (cf)(x) = cL $$
 
 \begin{proof}
-Let $\epsilon > 0$. Since $\lim_{x \rightarrow a} f(x) = L$, there exists a $\delta > 0$ such that
+Let $\epsilon > 0$. If $c = 0$ then we can choose $\delta = \epsilon$, since
+
+$$ 0 < |x - a| < \delta \quad \implies \quad |0 \cdot f(x) - 0 \cdot L| = 0 < \epsilon \quad \implies \quad \lim_{x \rightarrow a} (cf)(x) = 0$$
+
+Suppose $c \neq 0$. Since $\lim_{x \rightarrow a} f(x) = L$, there exists a $\delta > 0$ such that
 
 $$ 0 < |x - a| < \delta \quad \implies \quad |f(x) - L| < \frac{\epsilon}{|c|} $$
 
@@ -13,11 +17,11 @@ We can multiply both sides of the inequality on the right by $|c|$.
 
 $$ 0 < |x - a| < \delta \quad \implies \quad |c| \cdot |f(x) - L| < |c| \cdot \frac{\epsilon}{|c|} \quad \implies \quad |c| \cdot |f(x) - L| < \epsilon $$
 
-Now we can merge the two absolute value operations.
+We know that $|c| \cdot |f(x) - L| = |c(f(x) - L)|$ by the properties of the absolute value, so
 
 $$ 0 < |x - a| < \delta \quad \implies \quad |c(f(x) - L)| < \epsilon \quad \implies \quad |cf(x) - cL| < \epsilon $$
 
-Thus
+By the $\delta$-$\epsilon$ definition of the limit, we have
 
 $$ \lim_{x \rightarrow a} (cf)(x) = cL $$
 \end{proof}
