@@ -12,13 +12,17 @@ Let $\epsilon_1 > 0$. Let $\epsilon_2 > 0$ be a number that we will choose later
 
 For all $\epsilon_2 > 0$ there exists a $\delta_f > 0$ and a $\delta_g > 0$ such that
 
-    $$ 0 < |x - a| < \delta_f \implies |f(x) - L| < \epsilon_2 $$
-    $$ 0 < |x - a| < \delta_g \implies |g(x) - M| < \epsilon_2 $$
+\begin{align*}
+& 0 < |x - a| < \delta_f \implies |f(x) - L| < \epsilon_2 \\
+& 0 < |x - a| < \delta_g \implies |g(x) - M| < \epsilon_2
+\end{align*}
 
 Let $\delta = \min(\delta_f, \delta_g)$. Then
 
-    $$ 0 < |x - a| < \delta \implies |f(x) - L| < \epsilon_2 $$
-    $$ 0 < |x - a| < \delta \implies |g(x) - M| < \epsilon_2 $$
+\begin{align*}
+& 0 < |x - a| < \delta \implies |f(x) - L| < \epsilon_2 \\
+& 0 < |x - a| < \delta \implies |g(x) - M| < \epsilon_2
+\end{align*}
 
 Case 1: $L > 0$ and $M > 0$
 
@@ -26,13 +30,17 @@ We can choose an $\epsilon_2 > 0$ small enough so that $L - \epsilon_2 > 0$ and 
 
 For all $x$ in $(a - \delta, a + \delta)$ we have
 
-    $$ 0 < L - \epsilon_2 < f(x) < L + \epsilon_2 $$
-    $$ 0 < M - \epsilon_2 < g(x) < M + \epsilon_2 $$
+\begin{align*}
+& 0 < L - \epsilon_2 < f(x) < L + \epsilon_2 \\
+& 0 < M - \epsilon_2 < g(x) < M + \epsilon_2
+\end{align*}
 
 It follows that
 
-    $$ 0 < (L - \epsilon_2)(M - \epsilon_2) < f(x)g(x) < (L + \epsilon_2)(M + \epsilon_2) $$
-    $$ 0 < LM - (L + M)\epsilon_2 + (\epsilon_2)^2 < f(x)g(x) < LM + (L + M)\epsilon_2 + (\epsilon_2)^2 $$
+\begin{align*}
+& 0 < (L - \epsilon_2)(M - \epsilon_2) < f(x)g(x) < (L + \epsilon_2)(M + \epsilon_2) \\
+& 0 < LM - (L + M)\epsilon_2 + (\epsilon_2)^2 < f(x)g(x) < LM + (L + M)\epsilon_2 + (\epsilon_2)^2
+\end{align*}
 
 Observe that $|(L + M)\epsilon_2 + (\epsilon_2)^2| > |-(L + M)\epsilon_2 + (\epsilon_2)^2|$. So
 
@@ -42,20 +50,22 @@ Now comes the part where we choose an $\epsilon_2$.
 
 We want the expression $(L + M)\epsilon_2 + (\epsilon_2)^2$ to be equal to $\epsilon_1$.
 
-    $$ (\epsilon_2)^2 + (L + M)\epsilon_2 = \epsilon_1 $$
-    $$ (\epsilon_2)^2 + (L + M)\epsilon_2 - \epsilon_1 = 0 $$
+\begin{align*}
+& (\epsilon_2)^2 + (L + M)\epsilon_2 = \epsilon_1 \\
+& (\epsilon_2)^2 + (L + M)\epsilon_2 - \epsilon_1 = 0
+\end{align*}
 
 We can get the solutions to this equation by using the quadratic formula.
 
-    $$ \epsilon_2 = \frac{-(L + M) +- \sqrt{(L + M)^2 + 4\epsilon_1}}{2} $$
+    $$ \epsilon_2 = \frac{-(L + M) \pm \sqrt{(L + M)^2 + 4\epsilon_1}}{2} $$
 
 The discriminant $(L + M)^2 + 4\epsilon_1$ is positive, so the equation has two real solutions.
 
 Let $\epsilon_2$ be one of the solutions to this equation. Then
 
-    $$ 0 < |x - a| < d => |f(x)g(x) - LM| < (L + M)\epsilon_2 + (\epsilon_2)^2 = \epsilon_1 $$
+    $$ 0 < |x - a| < d \implies |f(x)g(x) - LM| < (L + M)\epsilon_2 + (\epsilon_2)^2 = \epsilon_1 $$
 
-Thus $lim_{x \rightarrow a} f(x)g(x) = LM$
+Thus $\lim_{x \rightarrow a} f(x)g(x) = LM$
 
 Case 2: $L < 0$ and $M < 0$
 
@@ -63,13 +73,17 @@ We can choose an $\epsilon_2 > 0$ small enough so that $L + \epsilon_2 < 0$ and 
 
 For all $x$ in $(a - \delta, a + \delta)$ we have
 
-    $$ L - \epsilon_2 < f(x) < L + \epsilon_2 < 0 $$ 
-    $$ M - \epsilon_2 < g(x) < M + \epsilon_2 < 0 $$
+\begin{align*}
+& L - \epsilon_2 < f(x) < L + \epsilon_2 < 0 \\
+& M - \epsilon_2 < g(x) < M + \epsilon_2 < 0
+\end{align*}
  
 It follows that
 
-    $$ 0 < (L + \epsilon_2)(M + \epsilon_2) < f(x)g(x) < (L - \epsilon_2)(M - \epsilon_2) $$
-    $$ 0 < LM + \epsilon_2(L + M) + (\epsilon_2)^2 < f(x)g(x) < LM - \epsilon_2(L + M) + (\epsilon_2)^2 $$
+\begin{align*}
+& 0 < (L + \epsilon_2)(M + \epsilon_2) < f(x)g(x) < (L - \epsilon_2)(M - \epsilon_2) \\
+& 0 < LM + \epsilon_2(L + M) + (\epsilon_2)^2 < f(x)g(x) < LM - \epsilon_2(L + M) + (\epsilon_2)^2
+\end{align*}
 
 Observe that
 
@@ -81,8 +95,10 @@ So
 
 We want the expression $(\epsilon_2)^2 - \epsilon_2(L + M)$ to equal $\epsilon_1$
 
-    $$ (\epsilon_2)^2 - \epsilon_2(L + M) = \epsilon_1 $$
-    $$ (\epsilon_2)^2 - \epsilon_2(L + M) - \epsilon_1 = 0 $$
+\begin{align*}
+& (\epsilon_2)^2 - \epsilon_2(L + M) = \epsilon_1 \\
+& (\epsilon_2)^2 - \epsilon_2(L + M) - \epsilon_1 = 0
+\end{align*}
 
 The quadratic equation above has a discriminant of
 
@@ -94,7 +110,7 @@ Let $\epsilon_2$ be one of these solutions. Then
 
     $$ |f(x)g(x) - LM| < (\epsilon_2)^2 - \epsilon_2(L + M) = \epsilon_1 $$
 
-Thus $lim_{x \rightarrow a} f(x)g(x) = LM$
+Thus $\lim_{x \rightarrow a} f(x)g(x) = LM$
 
 Case 3: $L < 0$ and $M > 0$
 =======
@@ -103,28 +119,36 @@ We can choose an $\epsilon_2 > 0$ small enough so that $L + \epsilon_2 < 0 and M
 
 For all $x$ in $(a - \delta, a + \delta)$ we have
 
-    $$ L - \epsilon_2 < f(x) < L + \epsilon_2 < 0 $$
-    $$ 0 < M - \epsilon_2 < f(x) < M + \epsilon_2 $$
+\begin{align*}
+& L - \epsilon_2 < f(x) < L + \epsilon_2 < 0 \\
+& 0 < M - \epsilon_2 < f(x) < M + \epsilon_2 
+\end{align*}
 
 It follows that
 
-	$$ (L - \epsilon_2)(M + \epsilon_2) < f(x)g(x) < (L + \epsilon_2)(M - \epsilon_2) $$
-	$$ LM + \epsilon_2L - \epsilon_2M - (\epsilon_2)^2 < f(x)g(x) < LM - \epsilon2L + \epsilon_2M - (\epsilon_2)^2 $$
-	$$ LM + \epsilon_2(L - M) - (\epsilon_2)^2 < f(x)g(x) < LM + \epsilon_2(M - L) - (\epsilon_2)^2 $$
+\begin{align*}
+& (L - \epsilon_2)(M + \epsilon_2) < f(x)g(x) < (L + \epsilon_2)(M - \epsilon_2) \\
+& LM + \epsilon_2L - \epsilon_2M - (\epsilon_2)^2 < f(x)g(x) < LM - \epsilon2L + \epsilon_2M - (\epsilon_2)^2 \\
+& LM + \epsilon_2(L - M) - (\epsilon_2)^2 < f(x)g(x) < LM + \epsilon_2(M - L) - (\epsilon_2)^2
+\end{align*}
 
 Observe that
 
-    $$ |\epsilon_2(L - M) - (\epsilon_2)^2| > |\epsilon_2(M - L) - (\epsilon_2)^2| $$
+$$ |\epsilon_2(L - M) - (\epsilon_2)^2| > |\epsilon_2(M - L) - (\epsilon_2)^2| $$
 
 So
 
-    $$ |f(x)g(x) - LM| < -(\epsilon_2(L - M) - (\epsilon_2)^2) $$
-    $$ |f(x)g(x) - LM| < \epsilon_2(M - L) + (\epsilon_2)^2 $$
+\begin{align*}
+& |f(x)g(x) - LM| < -(\epsilon_2(L - M) - (\epsilon_2)^2) \\
+& |f(x)g(x) - LM| < \epsilon_2(M - L) + (\epsilon_2)^2
+\end{align*}
 
 We want the expression $\epsilon_2(M - L) + (\epsilon_2)^2$ to be equal to $\epsilon_1$
 
-    $$ (\epsilon_2)^2 + (M - L)\epsilon_2 = e1 $$
-    $$ (\epsilon_2)^2 + (M - L)\epsilon_2 - e1 = 0 $$
+\begin{align*}
+& (\epsilon_2)^2 + (M - L)\epsilon_2 = e1 \\
+& (\epsilon_2)^2 + (M - L)\epsilon_2 - e1 = 0 
+\end{align*}
 
 The discriminant is $(M - L)^2 + 4\epsilon_1$.
 
@@ -132,17 +156,19 @@ Since the discriminant is positive, the quadratic equation has two real solution
 
 Let $\epsilon_2$ be one of these solutions. Then
 
-    $$ |f(x)g(x) - LM| < \epsilon_2(M - L) + (\epsilon_2)^2 = \epsilon1 $$
+$$ |f(x)g(x) - LM| < \epsilon_2(M - L) + (\epsilon_2)^2 = \epsilon1 $$
 
-Thus $lim_{x \rightarrow a} f(x)g(x) = LM$
+Thus $\lim_{x \rightarrow a} f(x)g(x) = LM$
 
 Case 4: $L = M = 0$
 =======
 
 For all $x$ in $(a - \delta, a + \delta)$, we have
 
-    $$ -\epsilon_2 < f(x) < \epsilon_2 $$
-    $$ -\epsilon_2 < g(x) < \epsilon_2 $$
+\begin{align*}
+& -\epsilon_2 < f(x) < \epsilon_2 \\
+& -\epsilon_2 < g(x) < \epsilon_2
+\end{align*}
 
 It follows that
 
@@ -167,8 +193,10 @@ We can choose an $\epsilon_2 > 0$ that is small enough so that $M - \epsilon_2 >
 
 For all $x$ in $(a - \delta, a + \delta)$, we have
 
-    $$ -\epsilon_2 < f(x) < \epsilon_2 $$
-    $$ 0 < M - \epsilon_2 < g(x) < M + \epsilon_2 $$
+\begin{align*}
+& -\epsilon_2 < f(x) < \epsilon_2 \\
+& 0 < M - \epsilon_2 < g(x) < M + \epsilon_2
+\end{align*}
 
 It follows that
 
@@ -182,8 +210,10 @@ Now it's time to choose a number for $\epsilon_2$.
 
 We want the expression $\epsilon_2(M + \epsilon2)$ to be equal to $\epsilon_1$
 
-    $$ \epsilon_2(M + \epsilon_2) = \epsilon_1 $$
-    $$ (\epsilon_2)^2 + M\epsilon_2 - \epsilon_1 = 0 $$
+\begin{align*}
+& \epsilon_2(M + \epsilon_2) = \epsilon_1 \\
+& (\epsilon_2)^2 + M\epsilon_2 - \epsilon_1 = 0
+\end{align*}
 
 The discriminant of this quadratic equation is
 
@@ -195,7 +225,7 @@ Let $\epsilon_2$ be one of these solutions. Then
 
     $$ |f(x)g(x) - 0| < \epsilon2(M + \epsilon_2) = \epsilon_1 $$
 
-Thus $lim_{x \rightarrow a} f(x)g(x) = LM = 0 $
+Thus $\lim_{x \rightarrow a} f(x)g(x) = LM = 0 $
 
 Case 6: $L = 0$ and $M < 0$
 =======
@@ -204,8 +234,10 @@ We can choose an $\epsilon_2 > 0$ that is small enough so that $M + \epsilon_2 <
 
 For all $x$ in $(a - \delta, a + \delta)$ we have
 
-    $$ -\epsilon2 < f(x) < \epsilon_2 $$
-    $$ M - \epsilon_2 < g(x) < M + \epsilon_2 < 0 $$
+\begin{align*}
+& -\epsilon2 < f(x) < \epsilon_2 \\
+& M - \epsilon_2 < g(x) < M + \epsilon_2 < 0
+\end{align*}
 
 It follows that
 
@@ -215,10 +247,12 @@ Thus
 
     $$ |f(x)g(x) - 0| < -\epsilon_2(M - \epsilon_2) $$
 
-We want the expression -e2(M - e2) to equal e1
+We want the expression $-\epsilon_2(M - \epsilon_2)$ to equal $\epsilon_1$
 
-    $$ (\epsilon_2)^2 - M\epsilon_2 = \epsilon_1 $$
-    $$ (\epsilon_2)^2 - M\epsilon_2 - \epsilon_1 = 0 $$
+\begin{align*}
+& (\epsilon_2)^2 - M\epsilon_2 = \epsilon_1 \\
+& (\epsilon_2)^2 - M\epsilon_2 - \epsilon_1 = 0
+\end{align*}
 
 The discriminant of the quadratic equation is
 
@@ -232,7 +266,7 @@ Let $\epsilon_2$ be one of these solutions. Then
 
 Thus
 
-    $$ lim_{x \rightarrow a} f(x)g(x) = LM = 0 $$
+    $$ \lim_{x \rightarrow a} f(x)g(x) = LM = 0 $$
 
 In all cases, we find that $\lim_{x \rightarrow a} f(x)g(x) = LM$
 
