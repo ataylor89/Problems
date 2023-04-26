@@ -1,0 +1,239 @@
+  Problem 16: Let f and g be real-valued functions such that
+
+    $$ \lim_{x \rightarrow a} f(x) = L \text{ and } \lim_{x \rightarrow a} g(x) = M $$
+
+where a, L, and M are real numbers. Prove that
+
+    $$ \lim_{x \rightarrow a} (fg)(x) = LM $$
+
+Proof:
+
+Let $\epsilon_1 > 0$. Let $\epsilon_2 > 0$ be a number that we will choose later.
+
+For all $\epsilon_2 > 0$ there exists a $\delta_f > 0$ and a $\delta_g > 0$ such that
+
+    $$ 0 < |x - a| < \delta_f \implies |f(x) - L| < \epsilon_2 $$
+    $$ 0 < |x - a| < \delta_g \implies |g(x) - M| < \epsilon_2 $$
+
+Let $\delta = \min(\delta_f, \delta_g)$. Then
+
+    $$ 0 < |x - a| < \delta \implies |f(x) - L| < \epsilon_2 $$
+    $$ 0 < |x - a| < \delta \implies |g(x) - M| < \epsilon_2 $$
+
+Case 1: $L > 0$ and $M > 0$
+
+We can choose an $\epsilon_2 > 0$ small enough so that $L - \epsilon_2 > 0$ and $M - \epsilon_2 > 0$
+
+For all $x$ in $(a - \delta, a + \delta)$ we have
+
+    $$ 0 < L - \epsilon_2 < f(x) < L + \epsilon_2 $$
+    $$ 0 < M - \epsilon_2 < g(x) < M + \epsilon_2 $$
+
+It follows that
+
+    $$ 0 < (L - \epsilon_2)(M - \epsilon_2) < f(x)g(x) < (L + \epsilon_2)(M + \epsilon_2) $$
+    $$ 0 < LM - (L + M)\epsilon_2 + \epsilon_2^2 < f(x)g(x) < LM + (L + M)\epsilon_2 + \epsilon_2^2 $$
+
+Observe that $|(L + M)\epsilon_2 + \epsilon_2^2| > |-(L + M)\epsilon_2 + \epsilon_2^2|$. So
+
+    $$ |f(x)g(x) - LM| < (L + M)\epsilon_2 + \epsilon_2^2 $$
+
+Now comes the part where we choose an $\epsilon_2$.
+
+We want the expression $(L + M)\epsilon_2 + \epsilon_2^2$ to be equal to $\epsilon_1$.
+
+    $$ \epsilon_2^2 + (L + M)\epsilon_2 = \epsilon_1 $$
+    $$ \epsilon_2^2 + (L + M)\epsilon_2 - \epsilon_1 = 0 $$
+
+We can get the solutions to this equation by using the quadratic formula.
+
+    $$ \epsilon_2 = \frac{-(L + M) +- \sqrt((L + M)^2 + 4\epsilon_1)}{2} $$
+
+The discriminant $(L + M)^2 + 4\epsilon_1$ is positive, so the equation has two real solutions.
+
+Let $\epsilon_2$ be one of the solutions to this equation. Then
+
+    $$ 0 < |x - a| < d => |f(x)g(x) - LM| < (L + M)\epsilon_2 + \epsilon_2^2 = \epsilon_1 $$
+
+Thus $lim_{x \rightarrow a} f(x)g(x) = LM$
+
+Case 2: $L < 0$ and $M < 0$
+
+We can choose an $\epsilon_2 > 0$ small enough so that $L + \epsilon_2 < 0$ and $M + \epsilon_2 < 0$
+
+For all $x$ in $(a - \delta, a + \delta)$ we have
+
+    $$ L - \epsilon_2 < f(x) < L + \epsilon_2 < 0 $$ 
+    $$ M - \epsilon_2 < g(x) < M + \epsilon_2 < 0 $$
+ 
+It follows that
+
+    $$ 0 < (L + \epsilon_2)(M + \epsilon_2) < f(x)g(x) < (L - \epsilon_2)(M - \epsilon_2) $$
+    $$ 0 < LM + \epsilon_2(L + M) + \epsilon_2^2 < f(x)g(x) < LM - \epsilon_2(L + M) + \epsilon_2^2 $$
+
+Observe that
+
+    $$ |-\epsilon_2(L + M) + \epsilon_2^2| > |\epsilon_2(L + M) + \epsilon_2^2| $$
+
+So
+
+    $$ |f(x)g(x) - LM| < \epsilon_2^2 - \epsilon_2(L + M) $$
+
+We want the expression $\epsilon_2^2 - \epsilon_2(L + M)$ to equal $\epsilon_1$
+
+    $$ \epsilon_2^2 - \epsilon_2(L + M) = \epsilon_1 $$
+    $$ \epsilon_2^2 - \epsilon_2(L + M) - \epsilon_1 = 0 $$
+
+The quadratic equation above has a discriminant of
+
+    $$ (-(L + M))^2 + 4\epsilon_1 $$
+
+The discriminant is positive, so the equation has two real solutions.
+
+Let $\epsilon_2$ be one of these solutions. Then
+
+    $$ |f(x)g(x) - LM| < \epsilon_2^2 - \epsilon_2(L + M) = \epsilon_1 $$
+
+Thus $lim_{x \rightarrow a} f(x)g(x) = LM$
+
+Case 3: $L < 0$ and $M > 0$
+=======
+
+We can choose an $\epsilon_2 > 0$ small enough so that $L + \epsilon_2 < 0 and M - \epsilon2 > 0$
+
+For all $x$ in $(a - \delta, a + \delta)$ we have
+
+    $$ L - \epsilon_2 < f(x) < L + \epsilon_2 < 0 $$
+    $$ 0 < M - \epsilon_2 < f(x) < M + \epsilon_2 $$
+
+It follows that
+
+	$$ (L - \epsilon_2)(M + \epsilon_2) < f(x)g(x) < (L + \epsilon_2)(M - \epsilon_2) $$
+	$$ LM + \epsilon_2L - \epsilon_2M - \epsilon_2^2 < f(x)g(x) < LM - \epsilon2L + \epsilon_2M - \epsilon_2^2 $$
+	$$ LM + \epsilon_2(L - M) - \epsilon_2^2 < f(x)g(x) < LM + \epsilon_2(M - L) - \epsilon_2^2 $$
+
+Observe that
+
+    $$ |\epsilon_2(L - M) - \epsilon_2^2| > |\epsilon_2(M - L) - \epsilon_2^2| $$
+
+So
+
+    $$ |f(x)g(x) - LM| < -(\epsilon_2(L - M) - \epsilon_2^2) $$
+    $$ |f(x)g(x) - LM| < \epsilon_2(M - L) + \epsilon_2^2 $$
+
+We want the expression $\epsilon_2(M - L) + \epsilon_2^2$ to be equal to $\epsilon_1$
+
+    $$ \epsilon_2^2 + (M - L)\epsilon_2 = e1 $$
+    $$ \epsilon_2^2 + (M - L)\epsilon_2 - e1 = 0 $$
+
+The discriminant is $(M - L)^2 + 4\epsilon_1$.
+
+Since the discriminant is positive, the quadratic equation has two real solutions.
+
+Let $\epsilon_2$ be one of these solutions. Then
+
+    $$ |f(x)g(x) - LM| < \epsilon_2(M - L) + \epsilon_2^2 = \epsilon1 $$
+
+Thus $lim_{x \rightarrow a} f(x)g(x) = LM$
+
+Case 4: $L = M = 0$
+=======
+
+For all $x$ in $(a - \delta, a + \delta)$, we have
+
+    $$ -\epsilon_2 < f(x) < \epsilon_2 $$
+    $$ -\epsilon_2 < g(x) < \epsilon_2 $$
+
+It follows that
+
+    $$ -\epsilon^2 < f(x)g(x) < \epsilon^2 $$
+
+Thus
+
+    $$ |f(x)g(x) - 0| < \epsilon_2^2 $$
+
+Now it's time to choose a number for $\epsilon_2$.
+
+Let $\epsilon = sqrt(\epsilon_1)$. Conveniently we have
+
+    $$ |f(x)g(x) - 0| < \epsilon_1 $$
+
+Thus $lim_{x \rightarrow a} f(x)g(x) = LM = 0$
+
+Case 5: $L = 0$ and $M > 0$
+=======
+
+We can choose an $\epsilon_2 > 0$ that is small enough so that $M - \epsilon_2 > 0$
+
+For all $x$ in $(a - \delta, a + \delta)$, we have
+
+    $$ -\epsilon_2 < f(x) < \epsilon_2 $$
+    $$ 0 < M - \epsilon_2 < g(x) < M + \epsilon_2 $$
+
+It follows that
+
+    $$ -\epsilon_2(M + \epsilon_2) < f(x)g(x) < \epsilon_2(M + \epsilon_2) $$
+
+Thus
+
+    $$ |f(x)g(x) - 0| < \epsilon_2(M + \epsilon_2) $$
+
+Now it's time to choose a number for $\epsilon_2$.
+
+We want the expression $\epsilon_2(M + \epsilon2)$ to be equal to $\epsilon_1$
+
+    $$ \epsilon_2(M + \epsilon_2) = \epsilon_1 $$
+    $$ \epsilon_2^2 + M\epsilon_2 - \epsilon_1 = 0 $$
+
+The discriminant of this quadratic equation is
+
+    $$ M^2 + 4\epsilon_1 $$
+
+Since the discriminant is positive, the equation has two real solutions.
+
+Let $\epsilon_2$ be one of these solutions. Then 
+
+    $$ |f(x)g(x) - 0| < \epsilon2(M + \epsilon_2) = \epsilon_1 $$
+
+Thus $lim_{x \rightarrow a} f(x)g(x) = LM = 0 $
+
+Case 6: $L = 0$ and $M < 0$
+=======
+
+We can choose an $\epsilon_2 > 0$ that is small enough so that $M + \epsilon_2 < 0$
+
+For all $x$ in $(a - \delta, a + \delta)$ we have
+
+    $$ -\epsilon2 < f(x) < \epsilon_2 $$
+    $$ M - \epsilon_2 < g(x) < M + \epsilon_2 < 0 $$
+
+It follows that
+
+    $$ \epsilon_2(M - \epsilon_2) < f(x)g(x) < -\epsilon_2(M - \epsilon_2) $$
+
+Thus
+
+    $$ |f(x)g(x) - 0| < -\epsilon_2(M - \epsilon_2) $$
+
+We want the expression -e2(M - e2) to equal e1
+
+    $$ \epsilon_2^2 - M\epsilon_2 = \epsilon_1 $$
+    $$ \epsilon_2^2 - M\epsilon_2 - \epsilon_1 = 0 $$
+
+The discriminant of the quadratic equation is
+
+    $$ M^2 + 4\epsilon_1 $$
+
+Since the discriminant is positive, the equation has two real solutions
+
+Let $\epsilon_2$ be one of these solutions. Then
+
+    $$ |f(x)g(x) - 0| < -\epsilon_2(M - \epsilon_2) = \epsilon_1 $$
+
+Thus
+
+    $$ lim_{x \rightarrow a} f(x)g(x) = LM = 0 $$
+
+In all cases, we find that $\lim_{x \rightarrow a} f(x)g(x) = LM$
+
+We have proven what we set out to prove
