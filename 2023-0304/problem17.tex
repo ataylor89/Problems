@@ -1,0 +1,21 @@
+Problem 17: Evaluate $$ \int_1^\infty \frac{dx}{e^{x+1} + e^{3-x}} $$
+
+(Source: Putnam)
+
+\begin{align*}
+\int_1^\infty \frac{dx}{e^{x+1} + e^{3-x}} &= \int_1^\infty \frac{dx}{e^{x+1} + e^{-(x-3)}} \\
+&= \int_1^\infty \frac{dx}{e^{x+1} + \frac{1}{e^{x-3}}} \\ 
+&= \int_1^\infty \frac{dx}{\frac{e^{x+1}e^{x-3}}{e^{x-3}} + \frac{1}{e^{x-3}}} \\ 
+&= \int_1^\infty \frac{dx}{\frac{e^{x+1}e^{x-3} + 1}{e^{x-3}}} \\ 
+&= \int_1^\infty \frac{e^{x-3}}{e^{x+1}e^{x-3} + 1} \, dx \\
+&= \int_1^\infty \frac{e^{x-3}}{e^{2(x-1)} + 1} \, dx \\
+&= \frac{1}{e^2} \int_1^\infty \frac{u}{u^2 + 1} \cdot \frac{du}{u} \qquad \qquad \text{substitute } u = e^{x-1} \\
+&= \frac{1}{e^2} \int_1^\infty \frac{1}{u^2 + 1} \, du \\
+&= \frac{1}{e^2} \lim_{b \rightarrow \infty} \int_1^b \frac{1}{u^2 + 1} \, du \\
+&= \frac{1}{e^2} \lim_{b \rightarrow \infty} \left( \arctan u \Bigg|_{x=1}^{x=b} \right) \\
+&= \frac{1}{e^2} \lim_{b \rightarrow \infty} \left( \arctan(e^{x-1}) \Bigg|_{x=1}^{x=b} \right) \\
+&= \frac{1}{e^2} \lim_{b \rightarrow \infty} \left( \arctan(e^{b-1}) - \arctan(e^{1-1}) \right) \\
+&= \frac{1}{e^2} \left( \frac{\pi}{2} - \arctan(1) \right) \\
+&= \frac{1}{e^2} \left( \frac{\pi}{2} - \frac{\pi}{4} \right) \\
+&= \boxed{\frac{\pi}{4e^2}} \\
+\end{align*}
