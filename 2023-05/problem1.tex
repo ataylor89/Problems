@@ -1,0 +1,21 @@
+Problem 1: Define a sequence $\{a_n\}_{n=1}^\infty$ by $a_1 = \sqrt{2}$ and $a_n = \sqrt{2a_{n-1}}$ for all $n > 1$. Determine $\displaystyle\lim_{n \rightarrow \infty} a_n$.
+
+Let's write out some of the initial terms, so that we can visualize the sequence.
+
+\begin{align*}
+& a_1 = \sqrt 2 \\
+& a_2 = \sqrt{2 \sqrt 2} \\
+& a_3 = \sqrt{2 \sqrt{2 \sqrt 2}} \\
+\end{align*}
+Let $L = \lim_{n \rightarrow \infty} a_n$.
+
+We can write the equation $L = \sqrt{2L}$.
+
+Solving for L we get,
+
+$$ L^2 = 2L \implies L(L - 2) = 0 \implies L = \{0, 2\} $$
+There are only two possible solutions to the equation $L = \sqrt{2L}$, so $L$ must be either 0 or 2.
+
+We can rule out 0 as a possibility, since $\frac{a_{n+1}}{a_n} > 1$ for all positive integers n.
+
+Therefore $\boxed{\lim_{n \rightarrow \infty} a_n = 2}$.
