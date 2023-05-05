@@ -1,0 +1,27 @@
+Problem 3: Let $p$ and $q$ be positive real numbers. Compute $\displaystyle \lim_{n \rightarrow \infty} \sqrt[n]{p^n + q^n}$.
+
+Suppose $p > q$. Then
+
+\begin{align*}
+\lim_{n \rightarrow \infty} \sqrt[n]{p^n + q^n} &= \lim_{n \rightarrow \infty} \sqrt[n]{p^n\left(1 + \left(\frac{q}{p}\right)^n\right)} \\
+&= \lim_{n \rightarrow \infty} p\sqrt[n]{1 + \left(\frac{q}{p}\right)^n} \\
+&= p \lim_{n \rightarrow \infty} \sqrt[n]{1 + \left(\frac{q}{p}\right)^n} \\
+&= p
+\end{align*}
+
+Similarly, if $p < q$, then
+
+$$\lim_{n \rightarrow \infty} \sqrt[n]{p^n + q^n} = q$$
+
+If $p = q$, then
+
+\begin{align*}
+\lim_{n \rightarrow \infty} \sqrt[n]{p^n + q^n} &= \lim_{n \rightarrow \infty} \sqrt[n]{2p^n} \\
+&=  \lim_{n \rightarrow \infty} p \sqrt[n]{2} \\
+&=  p \lim_{n \rightarrow \infty} \sqrt[n]{2} \\
+&= p
+\end{align*}
+
+Thus 
+
+$$ \boxed{\lim_{n \rightarrow \infty} \sqrt[n]{p^n + q^n} = \max(p, q)} $$
