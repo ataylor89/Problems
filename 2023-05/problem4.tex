@@ -1,0 +1,37 @@
+Problem 4: Let $c > 0$ be a real number. Prove that $\displaystyle \sum_{n=1}^\infty \frac{n!}{(cn)^n}$ converges if $c > \frac{1}{e}$ and diverges if $c < \frac{1}{e}$.
+
+We can use the Ratio Test.
+
+\begin{align*}
+r &= \lim_{n \rightarrow \infty} \frac{\frac{(n+1)!}{(c(n+1))^{n+1}}}{\frac{n!}{(cn)^{n}}} \\
+&= \lim_{n \rightarrow \infty} \frac{n^n}{c(n+1)^{n}} \\
+&= \frac{1}{c} \lim_{n \rightarrow \infty} \left(\frac{n}{n+1}\right)^n
+\end{align*}
+
+Let $y = \left(\frac{n}{n+1}\right)^n$. Then
+
+\begin{align*}
+\lim_{n \rightarrow \infty} \log y &= \lim_{n \rightarrow \infty} n \log{\frac{n}{n+1}} \\
+&= \lim_{n \rightarrow \infty} \frac{\log{\frac{n}{n+1}}}{\frac{1}{n}} \\
+&= \lim_{n \rightarrow \infty} \frac{\frac{n+1}{n} \left(\frac{n+1 - n}{(n+1)^2}\right)}{-n^{-2}} \\
+&= \lim_{n \rightarrow \infty} \frac{\frac{1}{n(n+1)}}{-\frac{1}{n^2}} \\
+&= \lim_{n \rightarrow \infty} - \frac{n}{n+1} \\
+&= -1
+\end{align*}
+
+Now
+
+$$ \lim_{n \rightarrow \infty} y = \lim_{n \rightarrow \infty} e^{\log y} = e^{\lim_{n \rightarrow \infty} \log y} = e^{-1} = \frac{1}{e} $$
+
+So
+
+\begin{align*}
+r &= \frac{1}{c} \lim_{n \rightarrow \infty} \left(\frac{n}{n+1}\right)^n \\
+&= \frac{1}{ec}
+\end{align*}
+
+Now let's find the values of $c$ for which $r = \frac{1}{ec} < 1$.
+
+$$ \frac{1}{ec} < 1 \iff \frac{1}{c} < e \iff c > \frac{1}{e} $$
+
+Thus the series $\displaystyle \sum_{n=1}^{\infty} \frac{n!}{(cn)^n}$ converges for $\displaystyle c > \frac{1}{e}$ and diverges for $\displaystyle c < \frac{1}{e}$ by the Ratio Test.
