@@ -1,0 +1,54 @@
+Problem 6: The function $f$ defined by $$f(x) = \frac{ax + b}{cx + d}, $$where $a$, $b$, $c$, and $d$ are nonzero real numbers, has the properties $f(19) = 19$, $f(97) = 97$, and $f(f(x)) = x$ for all values of $x$ except $-d/c$. Find the unique number that is not in the range of $f$. (Source: AIME)
+
+Let's invert f by swapping x and y and solving for y.
+
+\begin{align*}
+x &= \frac{ay + b}{cy + d} \\
+x(cy + d) &= ay + b \\
+cxy + dx &= ay + b \\
+ay - cxy &= dx - b \\
+y(a - cx) &= dx - b \\
+y &= \frac{dx - b}{a - cx}
+\end{align*}
+
+Thus $f^{-1}(x) = \frac{dx - b}{a - cx}$.
+
+This equation tells us there is a discontinuity at $x = \frac{a}{c}$.
+
+Since the function $f$ has only one discontinuity, it must be the case that $\frac{a}{c} = - \frac{d}{c}$. This brings us to our first result: $a = -d$.
+
+Now we can create a system of two equations and three variables, using the information we are given.
+
+$$ f(x) = \frac{ax + b}{cx + d} = \frac{b - dx}{cx + d} $$
+
+\begin{align*}
+19 &= \frac{b - 19d}{19c + d} \\
+19(19c + d) &= b - 19d \\
+b - 19^2c - 38d &= 0
+\end{align*}
+
+\begin{align*}
+97 &= \frac{b - 97d}{97c + d} \\
+97(97c + d) &= b - 97d \\
+b - 97^2c - 194d &= 0
+\end{align*}
+
+\begin{align*}
+b - 19^2c - 38d &= 0 \\
+b - 97^2c - 194d &= 0 \\
+(97^2 - 19^2)c + 156d &= 0 \\
+(97 - 19)(97 + 19)c + 156d &= 0 \\
+(78)(116)c + 156d &= 0 \\
+(78)(29)c + 39d &= 0 \\
+(6)(29)c + 3d &= 0 \\
+(2)(29)c + d &= 0 \\
+d &= -58c \\
+\frac{d}{c} &= -58 \\
+-\frac{d}{c} &= 58 \\
+\end{align*}
+
+Since $f^{-1}$ is not continuous at $x = \frac{a}{c} = -\frac{d}{c} = 58$, we know that $58$ is not in the range of $f$.
+
+And $f^{-1}$ has only one discontinuity.
+
+So $\boxed{58}$ is the unique value that is not in the range of $f$.
