@@ -8,7 +8,7 @@ Problem 7: Let $n \ge 2$ be an integer, and for any real number $0 \le \alpha \l
 First we'll find the coefficient of $x^n$ in the power series expansion of $(1 + x)^\alpha$. We'll do this by giving the Taylor series for $(1 + x)^\alpha$ at $x = 0$. Let $f(x) = (1 + x)^\alpha$. Then
 
 \[ 
-(1 + x)^\alpha = f(0) + f^1(0)x + \frac{f^2(0)}{2!}x^2 + \cdots + \frac{f^n(0)}{n!}x^n 
+(1 + x)^\alpha = f(0) + f'(0) \, x + \frac{f''(0)}{2!}x^2 + \cdots + \frac{f^n(0)}{n!}x^n 
 \]
 
 Thus $\displaystyle C(\alpha) = \frac{f^n(0)}{n!}$.
@@ -17,9 +17,9 @@ Now let's compute the nth derivative of $f(x) = (1 + x)^\alpha$.
 
 \begin{align*}
 & f(x) = (1 + x)^\alpha \\
-& f^1(x) = \alpha(1 + x)^{\alpha - 1} \\
-& f^2(x) = \alpha(\alpha - 1)(1 + x)^{\alpha - 2} \\
-& f^3(x) = \alpha(\alpha - 1)(\alpha - 2)(1 + x)^{\alpha - 3} \\
+& f'(x) = \alpha(1 + x)^{\alpha - 1} \\
+& f''(x) = \alpha(\alpha - 1)(1 + x)^{\alpha - 2} \\
+& f'''(x) = \alpha(\alpha - 1)(\alpha - 2)(1 + x)^{\alpha - 3} \\
 & f^n(x) = \alpha(\alpha - 1)(\alpha - 2)\cdots(\alpha - (n-1))(1 + x)^{\alpha - n} \\
 \end{align*}
 
