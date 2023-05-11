@@ -1,0 +1,33 @@
+\usepackage{amsthm}
+
+Problem 7 lemma: Let $\displaystyle p(t) = \prod_{k=1}^{n} (t+k)$ where $n \in \mathbb{N}$ and $n \geq 2$. Prove that $\displaystyle p'(t) = \prod_{k=1}^{n} (t+k) \sum_{k=1}^{n} \frac{1}{t + k}$.
+
+\begin{proof}
+Let $\displaystyle p_{m}(t) = \prod_{k=1}^{m} (t+k)$ be a sequence of polynomials starting at $m = 2$. 
+
+Suppose that $\displaystyle (p_{n})'(t) = \prod_{k=1}^{n} (t+k) \sum_{k=1}^{n} \frac{1}{t + k}$ for some natural number $n \geq 2$. Then
+\begin{align*}
+(p_{(n+1)})'(t) &= \left( p_{n}(t) \cdot (t + n + 1) \right)' \\
+&= (p_{n})'(t) \cdot (t + n + 1) + p_{n}(t) \\
+&= \left( \prod_{k=1}^{n} (t+k) \sum_{k=1}^{n} \frac{1}{t + k} \right) \cdot (t + n + 1) + \prod_{k=1}^{n} (t+k) \\
+&= \prod_{k=1}^{n} (t+k) \left( \sum_{k=1}^{n} \frac{1}{t + k} \cdot (t + n + 1) + 1 \right) \\
+&= \prod_{k=1}^{n} (t+k) \left( \sum_{k=1}^{n} \frac{1}{t + k} \cdot (t + n + 1) + \frac{t + n + 1}{t + n + 1} \right) \\
+&= \left( \prod_{k=1}^{n} (t+k) \right) (t + n + 1) \sum_{k=1}^{n+1} \frac{1}{t + k} \\
+&= \prod_{k=1}^{n+1} (t+k) \sum_{k=1}^{n+1} \frac{1}{t + k}
+\end{align*}
+This proves the inductive step. If the lemma is true for some natural number $n \geq 2$, then it is true for $n + 1$.
+
+Now let's prove the base case for $n = 2$.
+\begin{align*}
+p_{2}(t) &= (t + 1)(t + 2) \\
+&= t^2 + 3t + 2 \\ \\
+(p_{2})'(t) &= 2t + 3 \\ \\
+\prod_{k=1}^{2} (t+k) \sum_{k=1}^{2} \frac{1}{t + k} &= (t + 1)(t + 2)\left(\frac{1}{t + 1} + \frac{1}{t + 2}\right) \\
+&= (t + 2) + (t + 1) \\
+&= (2t + 3)
+\end{align*}
+This shows that $\displaystyle (p_{2})'(t) = \prod_{k=1}^{2} (t+k) \sum_{k=1}^{2} = 2t + 3$.
+
+Now that we have proven the inductive step, and the base case where $n = 2$, we have completed our proof by induction. We have shown by induction that $\displaystyle p'(t) = \prod_{k=1}^{n} (t+k) \sum_{k=1}^{n} \frac{1}{t + k}$.
+
+\end{proof}
