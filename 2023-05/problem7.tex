@@ -1,0 +1,55 @@
+\usepackage{amsthm}
+
+Problem 7: Let $n \ge 2$ be an integer, and for any real number $0 \le \alpha \le 1$, let $C(\alpha)$ be the coefficient of $x^n$ in the power series expansion of $(1+x)^\alpha$. Prove that
+
+\[\int_0^1 \left(C(-t-1)\left(\sum_{k=1}^n \frac{1}{t+k}\right)\right)\,dt = (-1)^n n. \]
+
+\begin{proof}
+First we'll find the coefficient of $x^n$ in the power series expansion of $(1 + x)^\alpha$. We'll do this by giving the Taylor series for $(1 + x)^\alpha$ at $x = 0$. Let $f(x) = (1 + x)^\alpha$. Then
+
+\[ 
+(1 + x)^\alpha = f(0) + f^1(0)x + \frac{f^2(0)}{2!}x^2 + \cdots + \frac{f^n(0)}{n!}x^n 
+\]
+
+Thus $\displaystyle C(\alpha) = \frac{f^n(0)}{n!}$.
+
+Now let's compute the nth derivative of $f(x) = (1 + x)^\alpha$.
+
+\begin{align*}
+& f(x) = (1 + x)^\alpha \\
+& f^1(x) = \alpha(1 + x)^{\alpha - 1} \\
+& f^2(x) = \alpha(\alpha - 1)(1 + x)^{\alpha - 2} \\
+& f^3(x) = \alpha(\alpha - 1)(\alpha - 2)(1 + x)^{\alpha - 3} \\
+& f^n(x) = \alpha(\alpha - 1)(\alpha - 2)\cdots(\alpha - (n-1))(1 + x)^{\alpha - n} \\
+\end{align*}
+
+So the nth derivative at $x = 0$ is
+
+\[ C(\alpha) = \frac{f^n(0)}{n!} = \frac{\alpha(\alpha - 1)(\alpha - 2)\cdots(\alpha - (n-1))}{n!} \]
+
+Plugging in $-t - 1$ for $\alpha$, we get
+
+\[ C(-t - 1) = \frac{(-t - 1)(-t - 2)\cdots(-t - n)}{n!} = \frac{(-1)^n (t + 1)(t + 2)\cdots(t + n)}{n!} \]
+
+Now we can evaluate the integral.
+
+\begin{align*}
+\int_0^1 \left(C(-t - 1) \sum_{k=1}^{n} \frac{1}{t + k} \right) \, dt 
+&= \int_0^1 \left( \frac{(-1)^n (t + 1)(t + 2)\cdots(t + n)}{n!} \sum_{k=1}^{n} \frac{1}{t + k} \right) \, dt \\
+&= \frac{(-1)^n}{n!} \int_0^1 \left( (t + 1)(t + 2)\cdots(t + n) \sum_{k=1}^{n} \frac{1}{t + k} \right) \, dt
+\end{align*}
+
+Let $g(t) = (t + 1)(t + 2) \cdots (t + n)$. Then $\displaystyle \frac{dg}{dt} = (t + 1)(t + 2)\cdots(t + n) \sum_{k=1}^{n} \frac{1}{t + k}$. Thus
+
+\begin{align*}
+\int_0^1 \left(C(-t - 1) \sum_{k=1}^{n} \frac{1}{t + k} \right) \, dt 
+&= \frac{(-1)^n}{n!} \int_0^1 \left( (t + 1)(t + 2)\cdots(t + n) \sum_{k=1}^{n} \frac{1}{t + k} \right) \, dt \\
+&= \frac{(-1)^n}{n!} \int_0^1 \left( \frac{dg}{dt} \right) \, dt \\
+&= \frac{(-1)^n}{n!} g(t) \Bigg|_0^1 \\
+&= \frac{(-1)^n}{n!} (g(1) - g(0)) \\
+&= \frac{(-1)^n}{n!} ((n+1)! - n!) \\
+&= \frac{(-1)^n}{n!} (n! ((n + 1) - 1)) \\
+&= \frac{(-1)^n}{n!} (n! \cdot n) \\
+&= (-1)^n \cdot n
+\end{align*}
+\end{proof}
