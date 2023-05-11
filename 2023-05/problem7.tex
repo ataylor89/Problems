@@ -39,7 +39,7 @@ Now we can evaluate the integral.
 &= \frac{(-1)^n}{n!} \int_0^1 \left( (t + 1)(t + 2)\cdots(t + n) \sum_{k=1}^{n} \frac{1}{t + k} \right) \, dt
 \end{align*}
 
-Let $g(t) = (t + 1)(t + 2) \cdots (t + n)$. Then $\displaystyle \frac{dg}{dt} = (t + 1)(t + 2)\cdots(t + n) \sum_{k=1}^{n} \frac{1}{t + k}$. Thus
+Let $g(t) = (t + 1)(t + 2) \cdots (t + n)$. Then $\displaystyle \frac{dg}{dt} = (t + 1)(t + 2)\cdots(t + n) \sum_{k=1}^{n} \frac{1}{t + k}$. (We can verify this with a repeated application of the Product Rule for derivatives.) Thus
 
 \begin{align*}
 \int_0^1 \left(C(-t - 1) \sum_{k=1}^{n} \frac{1}{t + k} \right) \, dt 
@@ -52,4 +52,6 @@ Let $g(t) = (t + 1)(t + 2) \cdots (t + n)$. Then $\displaystyle \frac{dg}{dt} = 
 &= \frac{(-1)^n}{n!} (n! \cdot n) \\
 &= (-1)^n \cdot n
 \end{align*}
+
+We have proven what we set out to prove.
 \end{proof}
