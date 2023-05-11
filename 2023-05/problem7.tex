@@ -4,6 +4,8 @@ Problem 7: Let $n \ge 2$ be an integer, and for any real number $0 \le \alpha \l
 
 \[\int_0^1 \left(C(-t-1)\left(\sum_{k=1}^n \frac{1}{t+k}\right)\right)\,dt = (-1)^n n. \]
 
+(Source: Putnam)
+
 \begin{proof}
 First we'll find the coefficient of $x^n$ in the power series expansion of $(1 + x)^\alpha$. We'll do this by giving the Taylor series for $(1 + x)^\alpha$ at $x = 0$. Let $f(x) = (1 + x)^\alpha$. Then
 
@@ -53,5 +55,5 @@ Let $g(t) = (t + 1)(t + 2) \cdots (t + n)$. Then $\displaystyle \frac{dg}{dt} = 
 &= (-1)^n \cdot n
 \end{align*}
 
-We have proven what we set out to prove.
+QED.
 \end{proof}
