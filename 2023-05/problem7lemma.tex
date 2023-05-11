@@ -10,8 +10,8 @@ Suppose that $\displaystyle (p_{n})'(t) = \prod_{k=1}^{n} (t+k) \sum_{k=1}^{n} \
 (p_{(n+1)})'(t) &= \left( p_{n}(t) \cdot (t + n + 1) \right)' \\
 &= (p_{n})'(t) \cdot (t + n + 1) + p_{n}(t) \\
 &= \left( \prod_{k=1}^{n} (t+k) \sum_{k=1}^{n} \frac{1}{t + k} \right) \cdot (t + n + 1) + \prod_{k=1}^{n} (t+k) \\
-&= \prod_{k=1}^{n} (t+k) \left( \sum_{k=1}^{n} \frac{1}{t + k} \cdot (t + n + 1) + 1 \right) \\
-&= \prod_{k=1}^{n} (t+k) \left( \sum_{k=1}^{n} \frac{1}{t + k} \cdot (t + n + 1) + \frac{t + n + 1}{t + n + 1} \right) \\
+&= \prod_{k=1}^{n} (t+k) \left( (t + n + 1) \left( \sum_{k=1}^{n} \frac{1}{t + k} \right) + 1 \right) \\
+&= \prod_{k=1}^{n} (t+k) \left( (t + n + 1) \left( \sum_{k=1}^{n} \frac{1}{t + k} \right) + \frac{t + n + 1}{t + n + 1} \right) \\
 &= \left( \prod_{k=1}^{n} (t+k) \right) (t + n + 1) \sum_{k=1}^{n+1} \frac{1}{t + k} \\
 &= \prod_{k=1}^{n+1} (t+k) \sum_{k=1}^{n+1} \frac{1}{t + k}
 \end{align*}
