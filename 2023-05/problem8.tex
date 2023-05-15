@@ -1,0 +1,26 @@
+Problem 8: Let $f(x) = \dfrac{x^6 + x^4}{x + 1}$. What is $f(i - 1)$?
+
+First let's plug in $(i - 1)$ for x.
+
+\[
+f(i - 1) = \frac{(i - 1)^6 + (i - 1)^4}{(i - 1) + 1}
+\]
+
+Now let's calculate $(i - 1)^2$, $(i - 1)^4$, and $(i - 1)^6$.
+
+\begin{align*}
+& (i - 1)^2 = i^2 - 2i + 1 = -1 - 2i + 1 = -2i \\
+& (i - 1)^4 = (-2i)^2 = 4i^2 = -4 \\
+& (i - 1)^6 = (i - 1)^2 (i-1)^4 = (-2i)(-4) = 8i
+\end{align*}
+
+So
+
+\begin{align*}
+f(i - 1) &= \frac{(i - 1)^6 + (i - 1)^4}{(i - 1) + 1} \\
+&= \frac{8i + -4}{i} \\
+&= \frac{8i + -4}{i} \cdot \frac{i}{i} \\
+&= \frac{8i^2 - 4i}{i^2} \\
+&= \frac{-8 - 4i}{-1} \\
+&= \boxed{8 + 4i}
+\end{align*}
