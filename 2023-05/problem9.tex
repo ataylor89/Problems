@@ -1,0 +1,25 @@
+Problem 9: Two solutions of $x^4 - 3x^3 + 5x^2 - 27x - 36 = 0$ are pure imaginary numbers. Find these two solutions. (Source: ARML)
+
+Let $z_1, z_2, z_3, z_4$ be the four complex roots of the polynomial. WLOG, $z_1$ and $z_2$ are pure imaginary numbers.
+
+\begin{align*}
+x^4 - 3x^3 + 5x^2 - 27x - 36 &= 0 \\
+(x - z_1)(x - z_2)(x - z_3)(x - z_4) &= 0 \\
+x^4 - (z_1 + z_2 + z_3 + z_4)x^3 + (z_1z_2 + z_1z_3 + z_1z_4 + z_2z_3 + z_2z_4 + z_3z_4)x^2 - (z_1z_2z_3 + z_1z_2z_4 + z_1z_3z_4 + z_2z_3z_4)x + z_1z_2z_3z_4 &= 0
+\end{align*}
+
+The coefficient of $x^3$ shows that $z_1 = -z_2$, since the coefficient is real. Also, $z_3 + z_4 = 3$.
+
+We have
+
+\begin{align*}
+z_1z_2z_3 + z_1z_2z_4 + z_1z_3z_4 + z_2z_3z_4 &= 27 \\
+-z_1^2z_3 - z_1^2z_4 + z_1z_3z_4 - z_1z_3z_4 &= 27 \\
+-z_1^2z_3 - z_1^2z_4 &= 27 \\
+-z_1^2(z_3 + z_4) &= 27 \\
+-3z_1^2 &= 27 \\
+z_1^2 &= -9 \\
+z_1 &= \pm 3i
+\end{align*}
+
+Thus $\boxed{z_1 = 3i \text{ and } z_2 = -3i}$ are the two solutions that are purely imaginary.
