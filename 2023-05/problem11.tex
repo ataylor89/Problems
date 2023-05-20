@@ -1,0 +1,37 @@
+Problem 11: Find all roots of $f(t) = 2t^4 -23t^2 +27t -36$. (Source: AoPS Precalculus)
+
+Let $f(t) = 2t^4 - 23t^2 + 27t - 36$.
+
+We have
+
+\begin{align*}
+f(1) &= 2 - 23 + 27 - 36 \\
+f(1) &= 2 + 4 - 36 \\
+f(1) &= - 30 \\
+f(2) &= 2(16) - 23(4) + 27(2) - 36 \\
+f(2) &= 32 - 92 + 54 - 36 \\
+f(2) &= -60 + 54 - 36 \\
+f(2) &= -42 \\
+f(3) &= 2(81) - 23(9) + 27(3) - 36 \\
+f(3) &= 162 - 207 + 81 - 36 \\
+f(3) &= 162 - 126 - 36 \\
+f(3) &= 0 \\
+\end{align*}
+
+Thus $t - 3$ is a factor of $f(t) = 2t^4 - 23t^2 + 27t - 36$.
+
+Dividing $f(t)$ by $t - 3$, we get
+
+\[ f(t) = (t - 3)(2t^3 + 6t^2 - 5t + 12) \]
+
+Now we can experiment with some values of $t$ and plug in $t = -1, -2, -3, -4$.
+
+After experimenting, we find that $f(-4) = 0$. So $t + 4$ is a factor of $f(t)$.
+
+Dividing $f(t)$ by $t + 4$, we get
+
+\[ f(t) = (t - 3)(t + 4)(2t^2 - 2t + 3) \]
+
+Applying the quadratic formula, we get the other two roots.
+
+\[ \boxed{t = 3, \quad -4, \quad \frac{1 + i\sqrt{5}}{2}, \quad \text{ and } \quad \frac{1 - i\sqrt{5}}{2}} \]
