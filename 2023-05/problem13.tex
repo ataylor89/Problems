@@ -1,0 +1,51 @@
+Problem 13: Find all values of $x$ such that $x^4 +5x^2 + 4x + 5=0$.
+
+Let $f(x) = x^4 + 5x^2 + 4x + 5$.
+
+Suppose $\frac{p}{q}$ is a rational root of $f(x)$, where $p$ and $q$ are relatively prime. Since $f(x)$ is monic, $\frac{p}{q}$ has to be an integer. Thus $q = 1$ and $\frac{p}{q} = p$. Now $5$ has to be a multiple of $p$. So $p = \pm 1$ or $p = \pm 5$. But if we try plugging $1, -1, 5, -5$ into $f(x)$, the output is not zero. Since these are the only possible rational roots, the quartic polynomial $f(x)$ has no rational roots.
+
+Now let's try factoring $f(x)$ as the product of two quadratics. If we can do this, then we can use the quadratic formula to get the roots. Suppose $f(x) = (x^2 + ax + b)(x^2 + cx + d)$ for real numbers $a, b, c, d$. Expanding this gives us
+
+\begin{align*}
+f(x) &= (x^2 + ax + b)(x^2 + cx + d) \\
+&= x^4 + cx^3 + dx^2 + ax^3 + acx^2 + adx + bx^2 + bcx + bd \\
+&= x^4 + (a + c)x^3 + (ac + b + d)x^2 + (ad + bc)x + bd
+\end{align*}
+
+So $a = -c$ and $bd = 5$. Suppose $b = 1$ and $d = 5$.
+
+\begin{align*}
+ac + b + d &= 5 \\
+ac + 1 + 5 &= 5 \\
+ac + 6 &= 5 \\
+ac &= -1 \\
+-a^2 &= -1 \\
+a^2 &= 1 \\
+a &= \pm 1
+\end{align*}
+
+Let's try the values $a = 1, b = 1, c = -1, d = 5$.
+
+\begin{align*}
+f(x) &= (x^2 + x + 1)(x^2 - x + 5) \\
+&= x^4 - x^3 + 5x^2 + x^3 - x^2 + 5x + x^2 - x + 5 \\
+&= x^4 + 5x^2 + 4x + 5
+\end{align*}
+
+The values $a = 1, b = 1, c = -1, d = 5$ give us our original polynomial. So we have factored $f(x)$ successfully. Now we can use the quadratic formula to find the roots. We'll start with the first quadratic.
+
+\begin{align*}
+x &= \frac{-1 \pm \sqrt{1 - 4}}{2} \\
+&= \frac{-1 \pm i \sqrt{3}}{2} \\
+\end{align*}
+
+Now onto the second quadratic.
+
+\begin{align*}
+x &= \frac{1 \pm \sqrt{1 - 4(5)}}{2} \\
+&= \frac{1 \pm i \sqrt{19}}{2} \\
+\end{align*}
+
+Thus
+
+$$ \boxed{x = \frac{-1 + i \sqrt{3}}{2},  \quad \frac{-1 - i \sqrt{3}}{2}, \quad \frac{1 + i \sqrt{19}}{2}, \quad \text{ and } \quad \frac{1 - i \sqrt{19}}{2}} $$
