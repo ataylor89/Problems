@@ -1,0 +1,41 @@
+Problem 16: Jerry writes down all binary strings of length 10 without any 2 consecutive 1s. How many 1s does Jerry write? (Source: AoPS Community Forums)
+
+Case 1: The string has five 1s.
+
+\begin{verbatim}_ 10 _ 10 _ 10 _ 10 _ 1 _\end{verbatim}
+
+We can add one 0 to six bins. There are $\boxed{6}$ ways to do this.
+
+Case 2: The string has four 1s.
+
+\begin{verbatim}_ 10 _ 10 _ 10 _ 1 _\end{verbatim}
+
+We can add three 0s to five bins. There are $\displaystyle {5 + 3 - 1 \choose 5 - 1} = {7 \choose 4} = {7 \choose 3} = \boxed{35}$ ways to do this.
+
+Case 3: The string has three 1s.
+
+\begin{verbatim}_ 10 _ 10 _ 1 _\end{verbatim}
+
+We can add five 0s to four bins. There are $\displaystyle {4 + 5 - 1 \choose 4 - 1} = {8 \choose 3} = \boxed{56}$ ways to do this.
+
+Case 4: The string has two 1s.
+
+\begin{verbatim}_ 10 _ 1 _\end{verbatim}
+
+We can add seven 0s to three bins. There are $\displaystyle {3 + 7 - 1 \choose 3 - 1} = {9 \choose 2} =  \boxed{36}$ ways to do this.
+
+Case 5: The string has one 1.
+
+There are $\boxed{10}$ possible strings that have one 1 (since there are ten digits, and any of them can be a 1).
+
+Wrapping up
+
+Now we can use these numbers to calculate the total number of ones Jerry writes.
+
+\[ 6(5) + 35(4) + 56(3) + 36(2) + 10(1) = 30 + 140 + 168 + 72 + 10 = 420 \]
+
+Jerry writes $\boxed{420}$ ones.
+
+Note:
+
+I used the ball and bin formula (see AoPS wiki) to count the number of possible strings in each case.
