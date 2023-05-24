@@ -1,0 +1,24 @@
+Problem 17: Find all complex numbers $z$ such that $|z - 1| = |z + 3| = |z - i|$. (Source: ARML)
+
+Let $z = a + bi$.
+
+\begin{align*}
+(a - 1)^2 + b^2 &= (a + 3)^2 + b^2 \\
+(a - 1)^2 &= (a + 3)^2 \\
+a - 1 &= \pm (a + 3) \\
+a - 1 &= -a - 3 \\
+2a &= -2 \\
+a &= -1
+\end{align*}
+
+\begin{align*}
+(a - 1)^2 + b^2 &= a^2 + (b - 1)^2 \\
+a^2 - 2a + 1 + b^2 &= a^2 + b^2 - 2b + 1 \\
+-2a + 1 &= -2b + 1 \\
+-2a &= -2b \\
+a &= b \\
+\end{align*}
+
+Thus $\boxed{z = -1 - i}$.
+
+Now let's think about this geometrically. The points $1, -3, \text{ and} -i$ form a triangle in the complex plane. There is only one complex number that is equidistant from the vertices of this triangle. $z$ is the point inside the triangle that is equidistant from the vertices.
