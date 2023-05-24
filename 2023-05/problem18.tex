@@ -1,0 +1,31 @@
+Problem 18: Suppose we define a sequence of complex numbers by $z_1 = 0$ and $z_{n + 1} = z_n^2 + i$ for $n \ge 1$. How far away from the origin is $z_{111}$? (Source: AHSME)
+
+Let's figure out the first four terms, and see if there is a pattern.
+
+\begin{align*}
+& z_1 = 0 \\
+& z_2 = (z_{1})^2 + i = 0^2 + i = i \\
+& z_3 = (z_{2})^2 + i = i^2 + i = i - 1 \\
+& z_4 = (z_{3})^2 + i = (i - 1)^2 + i = (i^2 - 2i + 1) + i = -i \\
+& z_5 = (z_4)^2 + i = (-i)^2 + i = i - 1
+\end{align*}
+
+There is a pattern. The sequence contains the cycle $i - 1, -i, i - 1$.
+
+So we can write the following:
+
+\[
+z_{n} = 
+\begin{cases}
+0 & \text{if $n = 1$} \\
+i & \text{if $n = 2$} \\
+i - 1 & \text{if $n$ is odd and $n > 2$} \\
+-i & \text{if $n$ is even and $n > 2$}
+\end{cases}
+\]
+
+According to our formula, $z_{111} = i - 1$.
+
+So $|z_{111}| = |i - 1| = \sqrt{2}$.
+
+The complex number $z_{111}$ is a distance of $\boxed{\sqrt{2}}$ from the origin.
