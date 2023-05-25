@@ -1,0 +1,18 @@
+Problem 20: Express $\cos 5\theta$ in terms of $\cos \theta$. (Source: AoPS Precalculus)
+
+We can use De Moivre's theorem and the Binomial Theorem. We can also use the identity $\sin^2 \theta = 1 - \cos^2 \theta$.
+
+\begin{align*}
+\cos 5\theta + i \sin 5\theta &= (\cos \theta + i \sin \theta)^5 \\
+&= (\cos \theta)^5 + 5(\cos \theta)^4(i \sin \theta) + 10(\cos \theta)^3(i \sin \theta)^2 + 10(\cos \theta)^2(i \sin \theta)^3 + 5(\cos \theta)(i \sin \theta)^4 + (i \sin \theta)^5 \\
+&= \cos^5 \theta + 5i \cos^4 \theta \sin \theta - 10 \cos^3 \theta (1 - \cos^2 \theta) - 10i \cos^2 \theta \sin^3 \theta + 5 \cos \theta (1 - \cos^2 \theta)^2 + i \sin^5 \theta \\
+\end{align*}
+
+Now we can equate the real parts.
+
+\begin{align*}
+\cos 5\theta &= \cos^5 \theta - 10 \cos^3 \theta (1 - \cos^2 \theta) + 5 \cos \theta (1 - \cos^2 \theta)^2 \\
+&= \cos^5 \theta - 10 \cos^3 \theta + 10\cos^5 \theta + 5 \cos \theta (1 - 2\cos^2 \theta + \cos^4 \theta) \\
+&= \cos^5 \theta - 10 \cos^3 \theta + 10\cos^5 \theta + 5 \cos \theta - 10\cos^3 \theta + 5\cos^5 \theta \\
+&= \boxed{16\cos^5 \theta - 20 \cos^3 \theta + 5 \cos \theta}
+\end{align*}
