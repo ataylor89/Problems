@@ -1,0 +1,23 @@
+Problem 19: A function $f$ is defined on the complex numbers by $f(z) = (a + bi)z$, where $a$ and $b$ are positive numbers. This function has the property that the image of each point in the complex plane is equidistant from that point and the origin. Given that $|a + bi| = 8$, find the value of $b^2$. (Source: AIME)
+
+We are given that $|f(z) - z| = |f(z)|$ for all complex numbers $z$. Let's plug in 1 for z.
+
+\begin{align*}
+|f(1) - 1| &= |f(1)| \\
+|a + bi - 1| &= |a + bi| \\
+(a - 1)^2 + b^2 &= a^2 + b^2 \\
+a^2 - 2a + 1 + b^2 &= a^2 + b^2 \\
+-2a + 1 &= 0 \\
+-2a &= -1 \\
+a &= \frac{1}{2}
+\end{align*}
+
+We are also given that $|a + bi| = 8$. Knowing $a$, we can solve for $b$.
+
+\begin{align*}
+|a + bi| &= 8 \\
+a^2 + b^2 &= 64 \\
+\left(\frac{1}{2}\right)^2 + b^2 &= 64 \\
+\frac{1}{4} + b^2 &= \frac{256}{4} \\
+b^2 &= \boxed{\frac{255}{4}}
+\end{align*}
