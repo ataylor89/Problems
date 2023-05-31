@@ -1,0 +1,39 @@
+Problem 22: For how many positive integers $n$ less than or equal to 1000 is
+
+\[(\sin t + i \cos t)^n = \sin nt + i \cos nt\]
+
+true for all real $t$? (Source: AIME)
+
+We have $\sin t = \cos(t - \frac{\pi}{2})$ and $\cos t = - \sin(t - \frac{\pi}{2})$. Thus
+
+\begin{align*}
+(\sin t + i \cos t)^n &= (\cos(t - \frac{\pi}{2}) - i \sin(t - \frac{\pi}{2}))^n \\
+&= \cos(n(t - \frac{\pi}{2})) - i \sin(n(t - \frac{\pi}{2})) \\
+&= \cos(nt - \frac{n\pi}{2}) - i \sin(nt - \frac{n\pi}{2})
+\end{align*}
+
+Now we have $\sin nt = \cos (nt - \frac{\pi}{2})$ and $\cos nt = - \sin(nt - \frac{\pi}{2})$.
+
+So
+
+$$ \sin nt + i \cos nt = \cos (nt - \frac{\pi}{2}) - i \sin(nt - \frac{\pi}{2}) $$
+
+We want to find the positive integers $n \leq 1000$ for which
+
+$$ \cos(nt - \frac{n\pi}{2}) - i \sin(nt - \frac{n\pi}{2}) = \cos (nt - \frac{\pi}{2}) - i \sin(nt - \frac{\pi}{2}) $$
+
+First we observe that the equation is true for $n = 1, 5, 9, ..., 997$.
+
+It is not true for the even positive integers, that is, $n = 2, 4, 6...$.
+
+It is also not true for the sequence $n = 3, 7, 11, ... $.
+
+So the solutions are $n = 1, 5, 9, ..., 997$.
+
+There are $250$ numbers in the sequence $n = 1, 5, 9, ..., 997$.
+
+So the equation
+
+\[ (\sin t + i \cos t)^n = \sin nt + i \cos nt\]
+
+is true for $\boxed{250}$ positive integers less than or equal to $1000$.
