@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\DeclareMathOperator\cis{cis}
+\newtheorem*{theorem}{Problem 21}
+
+\begin{document}
+\begin{theorem}
+Show that if $w = r \cis \alpha$ and $z = s \cis \beta$ (and $z \neq 0$), then $$\frac{w}{z}= \frac{r}{s} \cis (\alpha - \beta)$$
+
+(Source: AoPS Precalculus)
+\end{theorem}
+
+\begin{proof}
+First we will compute the reciprocal of $z$.
+
+\begin{align*}
+\frac{1}{z} &= \frac{1}{s \cis \beta} \\
+&= \frac{1}{s(\cos \theta + i \sin \theta)} \\
+&= \frac{1}{s(\cos \theta + i \sin \theta)} \cdot \frac{s(\cos \theta - i \sin \theta)}{s(\cos \theta - i \sin \theta)} \\
+&= \frac{s(\cos \theta - i \sin \theta)}{s^2(\cos^2 \theta + \sin^2 \theta)} \\
+&= \frac{s(\cos \theta - i \sin \theta)}{s^2} \\
+&= \frac{\cos \theta - i \sin \theta}{s}
+\end{align*}
+
+This yields the equation
+
+$$ \frac{1}{z} = \frac{\overline{z}}{|z|^2} \quad \text{ for all complex numbers $z$ where } z \neq 0 $$
+
+Dividing $w$ by $z$, we get
+
+\begin{align*}
+\frac{w}{z} &= r(\cos \alpha + i \sin \alpha) \cdot \left(\frac{\cos \beta - i \sin \beta}{s}\right) \\
+&= \frac{r}{s} (\cos \alpha \cos \beta - i \cos \alpha \sin \beta + i \cos \beta \sin \alpha + \sin \alpha \sin \beta) \\
+&= \frac{r}{s} (\cos \alpha \cos \beta + \sin \alpha \sin \beta + i (\sin \alpha \cos \beta - \cos \alpha \sin \beta)) \\
+&= \frac{r}{s} (\cos (\alpha) \cos (-\beta) - \sin (\alpha) \sin (-\beta) + i (\sin (\alpha) \cos (-\beta) + \cos (\alpha) \sin (-\beta))) \\
+&= \frac{r}{s} (\cos (\alpha - \beta) + i \sin (\alpha - \beta)) \\
+&= \boxed{\frac{r}{s} \cis (\alpha - \beta)}
+\end{align*}
+
+We can also do it this way.
+
+$$ \cis(\beta) \cis(\alpha - \beta) = \cis(\beta + \alpha - \beta) = \cis(\alpha) $$
+
+Thus
+
+$$ \frac{\cis \alpha}{\cis \beta} = \cis(\alpha - \beta) $$
+
+Now we can compute $\dfrac{w}{z}$.
+
+\begin{align*}
+\frac{w}{z} &= \frac{r \cis \alpha}{s \cis \beta} \\
+&= \frac{r}{s} \frac{\cis \alpha}{\cis \beta} \\
+&= \boxed{\frac{r}{s} \cis(\alpha - \beta)}
+\end{align*}
+\end{proof}
+
+\end{document}
