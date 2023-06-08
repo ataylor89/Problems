@@ -1,0 +1,63 @@
+Problem 2: We say that a polynomial is irreducible over the rational numbers if it cannot be factored as the product of polynomials with smaller positive degree and rational coefficients. Find a degree 4 polynomial with leading coefficient 1 and rational coefficients such that the polynomial is irreducible over the rational numbers and all the polynomial’s roots are twelfth roots of unity. (Source: HMMT)
+
+The twelfth roots of unity are
+
+$$ 1, e^{2 \pi i / 12}, e^{4 \pi i / 12}, e^{6 \pi i / 12}, e^{8 \pi i / 12}, e^{10 \pi i / 12}, e^{12 \pi i / 12}, e^{14 \pi i / 12}, e^{16 \pi i / 12}, e^{18 \pi i / 12}, e^{20 \pi i / 12}, e^{22 \pi i / 12} $$
+
+Let's label the twelfth roots of unity $\omega_1, \omega_2, ..., \omega_{12}$. We can write them in rectangular form.
+
+\begin{align*}
+\omega_1 &= 1 \\
+\omega_2 &= \frac{\sqrt{3}}{2} + \frac{1}{2}i \\
+\omega_3 &= \frac{1}{2} + \frac{\sqrt 3}{2}i \\
+\omega_4 &= i \\
+\omega_5 &= -\frac{1}{2} + \frac{\sqrt 3}{2}i \\
+\omega_6 &= -\frac{\sqrt 3}{2} + \frac{1}{2}i \\
+\omega_7 &= -1 \\
+\omega_8 &= -\frac{\sqrt 3}{2} - \frac{1}{2}i \\
+\omega_9 &= -\frac{1}{2} + \frac{\sqrt 3}{2}i \\
+\omega_{10} &= -i \\
+\omega_{11} &= \frac{1}{2} - \frac{\sqrt 3}{2}i \\
+\omega_{12} &= \frac{\sqrt 3}{2} - \frac{1}{2}i \\
+\end{align*}
+
+Let $p(x)$ be a fourth degree monic polynomial with rational coefficients such that all of the polynomial's roots are twelfth roots of unity. We can write
+
+\begin{align*}
+p(x) &= (x - r_1)(x - r_2)(x - r_3)(x - r_4) \\
+&= x^4 - (r_1 + r_2 + r_3 + r_4)x^3 + (r_1r_2 + r_1r_3 + r_1r_4 + r_2r_3 + r_2r_4 + r_3r_4)x^2 - (r_1r_2r_3 + r_1r_2r_4 + r_1r_3r_4 + r_2r_3r_4)x + r_1r_2r_3r_4
+\end{align*}
+
+Let
+
+\begin{align*}
+r_1 &= \frac{\sqrt{3}}{2} + \frac{1}{2}i \\
+r_2 &= \frac{\sqrt{3}}{2} - \frac{1}{2}i \\
+r_3 &= -\frac{\sqrt{3}}{2} + \frac{1}{2}i \\
+r_4 &= -\frac{\sqrt{3}}{2} - \frac{1}{2}i
+\end{align*}
+
+Then
+
+\begin{align*}
+p(x) &=  x^4 - (r_1 + r_2 + r_3 + r_4)x^3 + (r_1r_2 + r_1r_3 + r_1r_4 + r_2r_3 + r_2r_4 + r_3r_4)x^2 - (r_1r_2r_3 + r_1r_2r_4 + r_1r_3r_4 + r_2r_3r_4)x + r_1r_2r_3r_4 \\
+&= x^4 - 0x^3 + (1 + -1 - \frac{1 + i\sqrt 3}{2} - \frac{1 - i \sqrt 3}{2} - 1 + 1)x^2 - (-\sqrt{3} + \sqrt{3})x + 1 \\
+&= x^4 - x^2 + 1
+\end{align*}
+
+We have $p(x) = x^4 - x^2 + 1$ as our result. Let's plug in $r_1, r_2, r_3, r_4$ to confirm that the polynomial is correct.
+
+\begin{align*}
+(e^{2\pi i / 12})^4 - (e^{2\pi i / 12})^2 + 1 &= e^{8\pi i / 12} - e^{4\pi i / 12} + 1 = 0 \\
+(e^{22\pi i / 12})^4 - (e^{22\pi i / 12})^2 + 1 &= e^{88\pi i / 12} - e^{44\pi i / 12} + 1 = 0 \\
+(e^{10\pi i / 12})^4 - (e^{10\pi i / 12})^2 + 1 &= e^{40\pi i / 12} - e^{20\pi i / 12} + 1 = 0 \\
+(e^{14\pi i / 12})^4 - (e^{14\pi i / 12})^2 + 1 &= e^{56\pi i / 12} - e^{28\pi i / 12} + 1 = 0 \\
+\end{align*}
+
+Doing some arithmetic in my head, I feel more confident that $p(x) = x^4 - x^2 + 1$. Now I want to confirm that $p(x)$ is irreducible over the rationals. Recall that
+
+$$ p(x) = (x - r_1)(x - r_2)(x - r_3)(x - r_4) $$
+
+If we combine any two or three linear factors to form a quadratic or a cubic, we would end up getting some irrational coefficients.
+
+So $\boxed{p(x) = x^4 - x^2 + 1}$ is a monic polynomial with rational coefficients that is irreducible over the rational numbers, and all of the polynomial's roots are twelfth roots of unity.
