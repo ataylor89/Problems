@@ -1,0 +1,17 @@
+Problem 4: Find the roots of $g(z) = z^6 + z^4 + z^2 + 1$. (Source: AoPS Precalculus)
+
+Let $u = z^2$. Then $g(z) = u^3 + u^2 + u + 1$ and $ug(z) = u^4 + u^3 + u^2 + u$. 
+
+Subtracting the first equation from the second, we get
+
+\begin{align*}
+ug(z) - g(z) &= u^4 - 1 \\
+g(z)(u - 1) &= u^4 - 1 \\
+g(z) &= \frac{u^4 - 1}{u - 1} &\quad \text{provided $z \neq 1$ and $z \neq -1$} \\
+g(z) &= \frac{(z^2)^4 - 1}{z^2 - 1} \\
+g(z) &= \frac{z^8 - 1}{z^2 - 1}
+\end{align*}
+
+The roots of $g(z)$ are all of the 8th roots of unity except for $\pm 1$.
+
+$$ \boxed{z = \{e^{2 \pi i / 8}, e^{4 \pi i / 8}, e^{6 \pi i / 8}, e^{10 \pi i / 8}, e^{12 \pi i / 8}, e^{14 \pi i / 8}\}} $$
