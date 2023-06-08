@@ -1,0 +1,17 @@
+Problem 3: Find the roots of the polynomial $p(x) = x^8 + x^7 + x^6 + x^5 + x^4 + x^3 + x^2 + x + 1$. (Source: AoPS Precalculus)
+
+Multiplying $p(x)$ by $x$ we get
+
+$$ xp(x) = x^9 + x^8 + x^7 + x^6 + x^5 + x^4 + x^3 + x^2 + x $$
+
+Subtracting $p(x)$ from $xp(x)$, we get
+
+\begin{align*}
+xp(x) - p(x) &= x^9 - 1 \\
+p(x)(x - 1) &= x^9 - 1 \\
+p(x) &= \frac{x^9 - 1}{x - 1} &\quad \text{provided $x \neq 1$}
+\end{align*}
+
+Now we know that $x = 1$ is not a root of $p(x)$ since $p(1) = 9$. But from our equations above, we see that all of the ninth roots of unity except for $x = 1$ are roots of $p(x)$. Thus the roots of $p(x)$ are
+
+$$ \boxed{e^{2\pi i / 9}, e^{4\pi i / 9}, e^{6\pi i / 9}, e^{8\pi i / 9}, e^{10\pi i / 9}, e^{12\pi i / 9}, e^{14\pi i / 9}, e^{16\pi i / 9}} $$
