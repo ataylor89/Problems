@@ -1,0 +1,20 @@
+Problem 5: Let $\omega = e^{4\pi i/7}$. Evaluate\[ (2+\omega)(2+\omega^2)(2+\omega^3)(2+\omega^4)(2+\omega^5)(2+\omega^6). \] (Source: AoPS Precalculus)
+
+We can write $\omega$ as $\omega = e^{4\pi i / 7} = e^{2 \pi i k /7}$ where $k = 2$. Since $\omega^7 = 1$ and $\gcd(k, 7) = 1$, we know that $\omega$ is a primitive seventh root of unity.
+
+By the fundamental theorem of algebra, we have
+
+$$ z^7 - 1 = (z - 1)(z - \omega)(z - \omega^2)(z - \omega^3)(z - \omega^4)(z - \omega^5)(z - \omega^6) $$
+
+Substituting $z = -2$ gives us an expression like the one in the problem statement.
+
+\begin{align*}
+(-2)^7 - 1 &= (-2 - 1)(-2 - \omega)(-2 - \omega^2)(-2 - \omega^3)(-2 - \omega^4)(-2 - \omega^5)(-2 - \omega^6) \\
+(-2)^7 - 1 &= (-1)^7 (2 + 1)(2 + \omega)(2 + \omega^2)(2 + \omega^3)(2 + \omega^4)(2 + \omega^5)(2 + \omega^6) \\
+(-2)^7 - 1 &= -3(2 + \omega)(2 + \omega^2)(2 + \omega^3)(2 + \omega^4)(2 + \omega^5)(2 + \omega^6) \\
+-128 - 1 &= -3(2 + \omega)(2 + \omega^2)(2 + \omega^3)(2 + \omega^4)(2 + \omega^5)(2 + \omega^6) \\
+-129 &= -3(2 + \omega)(2 + \omega^2)(2 + \omega^3)(2 + \omega^4)(2 + \omega^5)(2 + \omega^6) \\
+43 &= (2 + \omega)(2 + \omega^2)(2 + \omega^3)(2 + \omega^4)(2 + \omega^5)(2 + \omega^6)
+\end{align*}
+
+Thus $\boxed{(2 + \omega)(2 + \omega^2)(2 + \omega^3)(2 + \omega^4)(2 + \omega^5)(2 + \omega^6) = 43}$.
