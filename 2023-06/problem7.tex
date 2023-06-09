@@ -1,0 +1,13 @@
+Problem 7: Find the sum of the $n^{\text{th}}$ roots of unity. (Source: AoPS Precalculus)
+
+We can sum the $n^{\text{th}}$ roots of unity using the sigma operator.
+
+\begin{align*}
+\sum_{k=0}^{n-1} e^{2 \pi i k / n} &= \sum_{k=0}^{n-1} (e^{2 \pi i / n})^k &\qquad \text{notice that this is a geometric series} \\
+&= \frac{(e^{2 \pi i / n})^n - 1}{e^{2 \pi i / n} - 1} &\qquad \text{we apply the formula for the sum of a geometric series} \\
+&= \frac{e^{2 \pi i } - 1}{e^{2 \pi i / n} - 1} \\
+&= \frac{1 - 1}{e^{2 \pi i / n} - 1} \\
+&= \boxed{0}
+\end{align*}
+
+So the sum of the $n^{\text{th}}$ roots of unity is $\boxed{0}$.
