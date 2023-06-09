@@ -1,0 +1,32 @@
+Problem 9: Evaluate the sum
+
+\[ \displaystyle \cos \frac{2\pi}{2n+1} + \cos \frac{2\cdot 2\pi}{2n+1} + \cos \frac{3\cdot 2\pi}{2n+1} + \cdots + \cos \frac{n\cdot 2\pi}{2n+1} , \]
+
+where $n$ is a positive integer. (Source: AoPS Precalculus)
+
+Let $\displaystyle S = \cos \frac{2\pi}{2n+1} + \cos \frac{2\cdot 2\pi}{2n+1} + \cos \frac{3\cdot 2\pi}{2n+1} + \cdots + \cos \frac{n\cdot 2\pi}{2n+1}$.
+
+Since $\cos(2\pi - \theta) = \cos(\theta)$, we have $\displaystyle \cos \frac{(n)2\pi}{2n + 1} = \frac{(n+1)2\pi}{2n + 1}$ and $\displaystyle \cos \frac{(n-1)2\pi}{2n + 1} = \cos \frac{(n+2)2\pi}{2n + 1}$ and so on. 
+
+Thus
+
+\begin{align*}
+&\cos \frac{(n+1)2\pi}{2n + 1} + \cos \frac{(n+2)2\pi}{2n + 1} + \cdots + \cos \frac{(2n)2\pi}{2n + 1} \\
+= &\cos \frac{(n)2\pi}{2n + 1} + \cos \frac{(n-1)2\pi}{2n + 1} + \cdots + \cos \frac{2\pi}{2n + 1}
+\end{align*}
+
+where each term is equal to the term above it.
+
+Adding these two equations, we get $\displaystyle \cos \frac{2\pi}{2n+1} + \cos \frac{2\cdot 2\pi}{2n+1} + \cos \frac{3\cdot 2\pi}{2n+1} + \cdots + \cos \frac{(2n) \cdot 2\pi}{2n+1} = 2S$.
+
+The series above is the sum of all the $(n+1)^{\text{th}}$ roots of unity except for $1$. Adding $1$ gives us the sum of the $(n+1)^{\text{th}}$ roots of unity, which is $0$.
+
+$$ 1 + \cos \frac{2\pi}{2n+1} + \cos \frac{2\cdot 2\pi}{2n+1} + \cos \frac{3\cdot 2\pi}{2n+1} + \cdots + \cos \frac{(2n) \cdot 2\pi}{2n+1} = 1 + 2S = 0 $$
+
+Now we can solve for $S$.
+
+$$ 0 = 1 + 2S \implies S = -\frac{1}{2} $$
+
+Thus
+
+$$ \boxed{\cos \frac{2\pi}{2n+1} + \cos \frac{2\cdot 2\pi}{2n+1} + \cos \frac{3\cdot 2\pi}{2n+1} + \cdots + \cos \frac{n\cdot 2\pi}{2n+1} = -\frac{1}{2}} $$
