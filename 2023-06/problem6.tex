@@ -1,0 +1,32 @@
+Problem 6: Find all solutions to $z^6 + z^4 + z^3 + z^2 + 1 = 0$. (Source: AIME)
+
+Let $p(z) = z^6 + z^4 + z^3 + z^2 + 1$. The sixth roots of unity are
+
+$$ 1, e^{2 \pi i / 6}, e^{4 \pi i / 6}, e^{6 \pi i / 6}, e^{8 \pi i / 6}, e^{10 \pi i / 6} $$
+
+In rectangular form, they are
+
+$$ 1, \frac{1}{2} + \frac{\sqrt 3}{2}i, -\frac{1}{2} + \frac{\sqrt 3}{2}i, -1, -\frac{1}{2} - \frac{\sqrt 3}{2}i, \frac{1}{2} - \frac{\sqrt 3}{2}i $$
+
+Let's guess that $e^{2\pi i / 6}$ is a root of $p(z)$. Plugging this in, we get
+
+\begin{align*}
+(e^{2 \pi i / 6})^6 + (e^{2 \pi i / 6})^4 + (e^{2 \pi i / 6})^3 + (e^{2 \pi i / 6})^2 + 1 
+&= e^{2 \pi i} + e^{8 \pi i / 6} + e^{6 \pi i / 6} + e^{4 \pi i / 6} + 1 \\
+&= 1 + -\frac{1}{2} - \frac{\sqrt 3}{2} + -1 - \frac{1}{2} + \frac{\sqrt 3}{2} + 1 \\
+&= 0
+\end{align*}
+
+Our guess was right. So $e^{2 \pi i / 6} = \frac{1}{2} + \frac{\sqrt 3}{2}i$ and its conjugate $e^{10 \pi i / 6} = \frac{1}{2} - \frac{\sqrt 3}{2}i$ are both roots of $p(z)$.
+
+Now $(z - (\frac{1}{2} + \frac{\sqrt 3}{2}i))(z - (\frac{1}{2} - \frac{\sqrt 3}{2}i)) = z^2 - z + 1$. Dividing $p(z)$ by $z^2 - z + 1$ gives us
+
+$$ p(z) = (z^2 - z + 1)(z^4 + z^3 + z^2 + z + 1) $$
+
+When $z \neq 1$, we have $z^4 + z^3 + z^2 + z + 1 = \dfrac{z^5 - 1}{z - 1}$. So the roots of $z^4 + z^3 + z^2 + z + 1$ are all the fifth roots of unity except for 1. The fifth roots of unity (excepting 1) are
+
+$$ e^{2 \pi i / 5}, e^{4 \pi i / 5}, e^{6 \pi i / 5}, e^{8 \pi i / 5} $$
+
+Combining these roots with the two roots we found earlier, we now have all six roots of the polynomial $p(z)$.
+
+$$ \boxed{e^{2 \pi i / 6}, 2^{10 \pi i / 6}, e^{2 \pi i / 5}, e^{4 \pi i / 5}, e^{6 \pi i / 5}, e^{8 \pi i / 5}} $$
