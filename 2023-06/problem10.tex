@@ -1,0 +1,51 @@
+Problem 10: The equation
+
+\[x^{10} + (13x - 1)^{10} = 0\] 
+
+has the 10 complex roots $r_1$, $\overline{r_1}$, $r_2$, $\overline{r_2}$, $r_3$, $\overline{r_3}$, $r_4$, $\overline{r_4}$, $r_5$, $\overline{r_5}$. Find the value of 
+
+\[\frac{1}{r_1 \overline{r_1}} + \frac{1}{r_2 \overline{r_2}} + \frac{1}{r_3 \overline{r_3}} + \frac{1}{r_4 \overline{r_4}} + \frac{1}{r_5 \overline{r_5}}.\]
+
+(Source: AIME)
+
+First let's find one of the roots.
+
+\begin{align*}
+x^{10} + (13x - 1)^{10} &= 0 \\
+x^{10} &= -(13x - 1)^{10} \\
+x^{10} &= (i^{10})(13x - 1)^{10} \\
+x^{10} &= (i(13x - 1))^{10} \\
+x &= i(13x - 1) &\qquad \text{this step gives us one of the roots} \\
+x &= 13ix - i \\
+x - 13ix &= - i \\
+x(1 - 13i) &= - i \\
+x(13i - 1) &= i \\
+x &= \frac{i}{13i - 1} \\
+x &= \frac{i(13i + 1)}{-169 - 1} \\
+x &= \frac{-13 + i}{-170} \\
+x &= \frac{13}{170} - \frac{1}{170}i
+\end{align*}
+
+We have found that $\displaystyle r_1 = \frac{13}{170} - \frac{1}{170}i$ is one of the roots of the equation. We can get all the roots of the equation by taking conjugates and by multiplying $r_1$ by the tenth roots of unity.
+
+\begin{align*}
+r_1 &= \frac{13}{170} - \frac{1}{170}i \\
+\overline{r_1} &= \frac{13}{170} + \frac{1}{170}i \\
+r_2 &= e^{2\pi i / 10}\left(\frac{13}{170} - \frac{1}{170}i\right) \\
+\overline{r_2} &= e^{18\pi i / 10}\left(\frac{13}{170} + \frac{1}{170}i\right) \\
+r_3 &= e^{4\pi i / 10}\left(\frac{13}{170} - \frac{1}{170}i\right) \\
+\overline{r_3} &= e^{16\pi i / 10}\left(\frac{13}{170} + \frac{1}{170}i\right) \\
+r_4 &= e^{6\pi i / 10}\left(\frac{13}{170} - \frac{1}{170}i\right) \\
+\overline{r_4} &= e^{14\pi i / 10}\left(\frac{13}{170} + \frac{1}{170}i\right) \\
+r_5 &= e^{8\pi i / 10}\left(\frac{13}{170} - \frac{1}{170}i\right) \\
+\overline{r_5} &= e^{12\pi i / 10}\left(\frac{13}{170} + \frac{1}{170}i\right) \\
+\end{align*}
+
+We have found all ten roots of the equation. Now we can find the value of the given expression.
+
+\begin{align*}
+\frac{1}{r_1 \overline{r_1}} + \frac{1}{r_2 \overline{r_2}} + \frac{1}{r_3 \overline{r_3}} + \frac{1}{r_4 \overline{r_4}} + \frac{1}{r_5 \overline{r_5}}
+&= 170 + e^{20 \pi i / 10} 170 + e^{20 \pi i / 10} 170 + e^{20 \pi i / 10} 170 + e^{20 \pi i / 10} 170 \\
+&= 170 \times 5 \\
+&= \boxed{850} \\
+\end{align*}
