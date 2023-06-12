@@ -1,0 +1,23 @@
+Problem 12: Let $z$ be such that $z^7 = 1$ and $z \neq 1$. Compute the numerical value of \[z^{10} + \frac{1}{z^{10}} + z^{30} + \frac{1}{z^{30}} + z^{50} + \frac{1}{z^{50}}.\] (Source: AoPS Precalculus)
+
+This is a problem where we are adding fractions. 
+
+We can give each fraction a common denominator, and then add them.
+
+\begin{align*}
+z^{10} + \frac{1}{z^{10}} + z^{30} + \frac{1}{z^{30}} + z^{50} + \frac{1}{z^{50}}
+&= \frac{z^{60}}{z^{50}} + \frac{z^{40}}{z^{50}} + \frac{z^{80}}{z^{50}} + \frac{z^{20}}{z^{50}} + \frac{z^{100}}{z^{50}} + \frac{1}{z^{50}} \\
+&= \frac{1 + z^{20} + z^{40} + z^{60} + z^{80} + z^{100}}{z^{50}} \\
+&= \frac{\frac{z^{120} - 1}{z^{20} - 1}}{z^{50}} \\
+&= \frac{\frac{z - 1}{z^{6} - 1}}{z} \\
+&= \frac{\frac{z - 1}{(z - 1)(z^5 + z^4 + z^3 + z^2 + z + 1)}}{z} \\
+&= \frac{1}{z^6 + z^5 + z^4 + z^3 + z^2 + z} \\
+&= \frac{1}{-1} \\
+&= \boxed{-1}
+\end{align*}
+
+Since the nonreal seventh roots of unity are all primitive roots of unity, the series $z^6 + z^5 + z^4 + z^3 + z^2 + z$ represents the sum of the nonreal seventh roots of unity. Thus $z^6 + z^5 + z^4 + z^3 + z^2 + z = -1$.
+
+After a series of algebraic manipulations, we discover that
+
+$$ \boxed{z^6 + z^5 + z^4 + z^3 + z^2 + z = -1} $$
