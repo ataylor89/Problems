@@ -1,0 +1,15 @@
+Problem 11: Let $\omega$ be a primitive $13^{\text{th}}$ root of unity. Evaluate $(1 - \omega)(1 - \omega^2) \dotsm (1 - \omega^{12})$.
+
+(Source: AoPS Precalculus)
+
+We have $x^{13} - 1 = (x  - 1)(x^{12} + x^{11} + \cdots + x + 1)$.
+
+The roots of $x^{13} - 1$ are the 13th roots of unity, $1, \omega, \omega^2, \hdots, \omega^{12}$.
+
+Thus the roots of $x^{12} + x^{11} + \cdots + x + 1$ are $\omega, \omega^2, \hdots, \omega^{12}$.
+
+This means that $(x - \omega)(x - \omega^2)\cdots(x - \omega^{12}) = x^{12} + x^{11} + \cdots + x + 1$.
+
+Plugging in $1$ for $x$, we get
+
+$$ (1 - \omega)(1 - \omega^2)\cdots(1 - \omega^{12}) = \boxed{13} $$
