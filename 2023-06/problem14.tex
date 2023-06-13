@@ -1,0 +1,12 @@
+Problem 14: Factor $x^7 + x^4 + x^3 + x + 1$ into the product of two polynomials with integer coefficients and positive degrees. (Source: AoPS Precalculus)
+
+We can manipulate the expression $x^7 + x^4 + x^3 + x + 1$ until we get an expression that factors nicely.
+
+\begin{align*}
+x^7 + x^4 + x^3 + x + 1 &= x^4 + x^3 + x^2 + x + 1 + (x^7 - x^2) \\
+&= x^4 + x^3 + x^2 + x + 1 + x^2(x^5 - x^1) \\
+&= x^4 + x^3 + x^2 + x + 1 + x^2(x - 1)(x^4 + x^3 + x^2 + x + 1) \\
+&= (x^4 + x^3 + x^2 + x + 1)(1 + x^2(x - 1)) \\
+&= (x^4 + x^3 + x^2 + x + 1)(1 + x^3 - x^2) \\
+&= \boxed{(x^3 - x^2 + 1)(x^4 + x^3 + x^2 + x + 1)}
+\end{align*}
