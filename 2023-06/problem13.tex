@@ -1,0 +1,22 @@
+Problem 13: The nonzero complex numbers $a$, $b$, and $c$ satisfy $\dfrac{a}{b} = \dfrac{b}{c} = \dfrac{c}{a}$. What are the possible values of $\dfrac{a+b-c}{a-b+c}$? (Source: AoPS Precalculus)
+
+Let $\displaystyle k = \frac{a}{b} = \frac{b}{c} = \frac{c}{a}$. Then $a = bk, b = ck, \text{ and } c = ak$. Substituting these values in the denominator we get
+
+\begin{align*}
+\frac{a + b - c}{a - b + c} &= \frac{a + b - c}{bk - ck + ak} \\
+&= \frac{a + b - c}{k(b - c + a)} \\
+&= \frac{a + b - c}{k(a + b - c)} \\
+&= \frac{1}{k}
+\end{align*}
+
+Now $\displaystyle k^3 = \frac{a}{b} \cdot \frac{b}{c} \cdot \frac{c}{a} = 1$, so $k$ is a primitive cube root of unity.
+
+\begin{align*}
+\frac{a + b - c}{a - b + c} &= \frac{1}{k} \\
+&= \frac{k^2}{k^3} \\
+&= k^2
+\end{align*}
+
+The possible values of $\dfrac{a + b - c}{a - b + c}$ are the possible values of $k^2$, which are
+
+$$ \boxed{1, -\frac{1}{2} + \frac{\sqrt 3}{2}i, \text{ and } -\frac{1}{2} - \frac{\sqrt 3}{2}i} $$
