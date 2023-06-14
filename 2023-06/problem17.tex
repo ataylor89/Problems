@@ -1,0 +1,13 @@
+Problem 17: Determine all integer values of $\theta$ with $0^\circ \le \theta \le 90^\circ$ for which $(\cos \theta + i \sin \theta)^{75}$ is a real number. (Source: ARML)
+
+Let $z = (\cos \theta + i \sin \theta)^{75}$. By de Moivre's theorem, we have
+
+$$ z = (\cos \theta + i \sin \theta)^{75} = \cos (75\theta) + i \sin (75\theta) $$
+
+Now $z$ is a real number when $75\theta$ is an integer multiple of $180$, that is, for all values
+
+$$ \theta = \frac{180n}{75} = \frac{12n}{5} \text{ where $n$ is an integer and } 0 \leq \theta \leq 90 $$
+
+For $\theta$ to be an integer, $\displaystyle n$ has to be an integer multiple of $\displaystyle 5$. Thus $n = 0, 5, 10, ..., 35$. This gives us
+
+$$ \boxed{\theta = 0^{\circ}, 12^{\circ}, 24^{\circ}, 36^{\circ}, 48^{\circ}, 60^{\circ}, 72^{\circ}, 84^{\circ}} $$
