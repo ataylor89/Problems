@@ -1,0 +1,30 @@
+Problem 20: Express $\sin 5 \theta$ in terms of $\sin \theta$. (Source: AoPS Precalculus)
+
+By de Moivre's theorem, we have
+
+$$ (\cos \theta + i \sin \theta)^5 = \cos 5\theta + i \sin 5 \theta $$
+
+Now we can apply the Binomial Theorem.
+
+\begin{align*}
+(\cos \theta + i \sin \theta)^5 &= (\cos \theta)^5 + 5(\cos \theta)^4 (i \sin \theta) + 10(\cos \theta)^3 (i \sin \theta)^2 + 10 (\cos \theta)^2 (i \sin \theta)^3 + 5(\cos \theta) (i \sin \theta)^4 + (i \sin \theta)^5 \\
+&= \cos^5 \theta + 5i \cos^4 \theta \sin \theta - 10\cos^3 \theta \sin^2 \theta - 10i \cos^2 \theta \sin^3 \theta + 5\cos \theta \sin^4 \theta + i \sin^5 \theta
+\end{align*}
+
+We can equate $\sin 5\theta$ with the imaginary part of the equation.
+
+$$ \sin 5\theta = 5\cos^4 \theta \sin \theta - 10\cos^2 \theta \sin^3 \theta + \sin^5 \theta $$
+
+Now we can substitute $1 - \cos^2 \theta$ for $\sin^2 \theta$.
+
+\begin{align*}
+\sin 5\theta &= 5\cos^4 \theta \sin \theta - 10\cos^2 \theta \sin^3 \theta + \sin^5 \theta \\
+&= 5(1 - \sin^2 \theta)^2 \sin \theta - 10(1 - \sin^2 \theta) \sin^3 \theta + \sin^5 \theta \\
+&= 5(1 - 2\sin^2 \theta + \sin^4 \theta) \sin \theta - 10(\sin^3 \theta - \sin^5 \theta) + \sin^5 \theta \\
+&= 5\sin \theta - 10\sin^3 \theta + 5\sin^5 \theta - 10\sin^3 \theta + 10\sin^5 \theta + \sin^5 \theta \\
+&= 16 \sin^5 \theta - 20\sin^3 \theta + 5\sin \theta
+\end{align*}
+
+We arrive at the equation
+
+$$ \boxed{\sin 5\theta = 16 \sin^5 \theta - 20\sin^3 \theta + 5\sin \theta} $$
