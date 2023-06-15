@@ -1,0 +1,67 @@
+Problem 18: The roots of $x^3 + ax^2 + bx + c = 0$ are $\alpha, \beta, \text{ and } \gamma$. Find the cubic polynomial whose roots are $\alpha^3, \beta^3, \text{ and } \gamma^3$. (Source: Putnam 1939 A3)
+
+Using Vieta's formulas, we can write the cubic polynomial in terms of its roots. Letting $q(x)$ be the cubic polynomial, we have
+
+$$ q(x) = x^3 - (\alpha^3 + \beta^3 + \gamma^3) x^2 + (\alpha^3 \beta^3 + \alpha^3 \gamma^3 + \beta^3 \gamma^3) x - \alpha^3 \beta^3 \gamma^3 $$
+
+Now we want to write the coefficients in terms of $a, b, \text{ and } c$. First we will find an expression for $\alpha^3 + \beta^3 + \gamma^3$. We can expand $(\alpha + \beta + \gamma)^3$ using the multinomial theorem.
+
+$$ (\alpha + \beta + \gamma)^3 = \alpha^3 + \beta^3 + \gamma^3 + 3(\alpha \beta^2 + \alpha \gamma^2 + \beta \alpha^2 + \beta \gamma^2 + \gamma \alpha^2 + \gamma \beta^2) + 6 \alpha \beta \gamma $$
+
+Now let $p(x) = x^3 + ax^2 + bx + c$ be the original polynomial. By Vieta's formulas, we have $a = -(\alpha + \beta + \gamma)$, and $b = \alpha \beta + \alpha \gamma + \beta \gamma$, and $c = -\alpha \beta \gamma$. This allows us to make many substitutions in our equation involving $(\alpha + \beta + \gamma)^3$.
+
+\begin{align*}
+(-a)^3 &= \alpha^3 + \beta^3 + \gamma^3 + 3(\alpha \beta^2 + \alpha \gamma^2 + \beta \alpha^2 + \beta \gamma^2 + \gamma \alpha^2 + \gamma \beta^2) - 6c & \qquad \text{(Equation 1)}
+\end{align*}
+
+We want to isolate the expression $\alpha^3 + \beta^3 + \gamma^3$, but first we have to find a way of writing $\alpha \beta^2 + \alpha \gamma^2 + \beta \alpha^2 + \beta \gamma^2 + \gamma \alpha^2 + \gamma \beta^2$ in terms of $a, b, \text{ and } c$. We can accomplish this with the following trick.
+
+$$ (\alpha + \beta + \gamma)(\alpha \beta + \alpha \gamma + \beta \gamma) = \alpha \beta^2 + \alpha \gamma^2 + \beta \alpha^2 + \beta \gamma^2 + \gamma \alpha^2 + \gamma \beta^2 + 3 \alpha \beta \gamma $$
+
+Now we can substitute $a, b, \text{ and } c$ into the above equation.
+
+\begin{align*}
+-ab &= \alpha \beta^2 + \alpha \gamma^2 + \beta \alpha^2 + \beta \gamma^2 + \gamma \alpha^2 + \gamma \beta^2 - 3c \\
+-ab + 3c &= \alpha \beta^2 + \alpha \gamma^2 + \beta \alpha^2 + \beta \gamma^2 + \gamma \alpha^2 + \gamma \beta^2 & \qquad \text{(Result 1)}
+\end{align*}
+
+Now we can simplify Equation 1 by substituting the expression from our first result.
+
+\begin{align*}
+(-a)^3 &= \alpha^3 + \beta^3 + \gamma^3 + 3(-ab + 3c) - 6c \\
+-a^3 &= \alpha^3 + \beta^3 + \gamma^3 - 3ab + 9c - 6c \\
+-a^3 &= \alpha^3 + \beta^3 + \gamma^3 - 3ab + 3c \\
+-a^3 + 3ab - 3c &= \alpha^3 + \beta^3 + \gamma^3 & \qquad \text{(Result 2)}
+\end{align*}
+
+This brings us to our second result: we have written the first symmetric sum of the roots of $q(x)$ in terms of $a, b, \text{ and } c$. Now we want to write the second symmetric sum of the roots of $q(x)$ in terms of $a, b, \text{ and } c$. We can do this by expanding the expression $(\alpha \beta + \alpha \gamma + \beta \gamma)^3$ and manipulating the equation that results.
+
+\begin{align*}
+(\alpha \beta + \alpha \gamma + \beta \gamma)^3 
+&= \alpha^3 \beta^3 + \alpha^3 \gamma^3 + \beta^3 \gamma^3 + 3\alpha\beta\gamma(\alpha \beta^2 + \alpha \gamma^2 + \beta \alpha^2 + \beta \gamma^2 + \gamma \alpha^2 + \gamma \beta^2) + 6\alpha^2 \beta^2 \gamma^2
+\end{align*}
+
+Now $b = \alpha^3 \beta^3 + \alpha^3 \gamma^3 + \beta^3 \gamma^3$, and $c^2 = \alpha^2 \beta^2 \gamma^2$. Also, $-c = \alpha \beta \gamma$. Furthermore, our first result gives us $-ab + 3c = \alpha \beta^2 + \alpha \gamma^2 + \beta \alpha^2 + \beta \gamma^2 + \gamma \alpha^2 + \gamma \beta^2$. So we can make these substitutions in the equation involving $(\alpha \beta + \alpha \gamma + \beta \gamma)^3$. After making these substitutions, we can isolate the expression $\alpha^3 \beta^3 + \alpha^3 \gamma^3 + \beta^3 \gamma^3$.
+
+\begin{align*}
+(\alpha \beta + \alpha \gamma + \beta \gamma)^3 
+&= \alpha^3 \beta^3 + \alpha^3 \gamma^3 + \beta^3 \gamma^3 + 3\alpha\beta\gamma(\alpha \beta^2 + \alpha \gamma^2 + \beta \alpha^2 + \beta \gamma^2 + \gamma \alpha^2 + \gamma \beta^2) + 6\alpha^2 \beta^2 \gamma^2 \\
+b^3 &= \alpha^3 \beta^3 + \alpha^3 \gamma^3 + \beta^3 \gamma^3 - 3c(-ab + 3c) + 6c^2 \\
+b^3 + 3c(-ab + 3c) - 6c^2 &= \alpha^3 \beta^3 + \alpha^3 \gamma^3 + \beta^3 \gamma^3 \\
+b^3 - 3abc + 9c^2 - 6c^2 &= \alpha^3 \beta^3 + \alpha^3 \gamma^3 + \beta^3 \gamma^3 \\
+b^3 - 3abc + 3c^2 &= \alpha^3 \beta^3 + \alpha^3 \gamma^3 + \beta^3 \gamma^3 & \qquad \text{(Result 3)}
+\end{align*}
+
+In our third result, we have written the second symmetric sum $\alpha^3 \beta^3 + \alpha^3 \gamma^3 + \beta^3 \gamma^3$ in terms of $a, b, \text{ and } c$. Now we are ready to rewrite the polynomial $q(x)$ in terms of $a, b, \text{ and } c$.
+
+\begin{align*}
+q(x) &= x^3 - (\alpha^3 + \beta^3 + \gamma^3) x^2 + (\alpha^3 \beta^3 + \alpha^3 \gamma^3 + \beta^3 \gamma^3) x - \alpha^3 \beta^3 \gamma^3 \\
+&= x^3 - (-a^3 + 3ab - 3c)x^2 + (b^3 - 3abc + 3c^2)x + c^3 \\
+&= x^3 + (a^3 - 3ab + 3c)x^2 + (b^3 - 3abc + 3c^2)x + c^3 \\
+\end{align*}
+
+Finally we arrive at the cubic polynomial
+
+$$ \boxed{q(x) = x^3 + (a^3 - 3ab + 3c)x^2 + (b^3 - 3abc + 3c^2)x + c^3} $$
+
+whose roots are $\alpha^3, \beta^3, \text{ and } \gamma^3$.
