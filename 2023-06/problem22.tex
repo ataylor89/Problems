@@ -1,0 +1,24 @@
+Problem 22: Let $z = e^{i\theta}$, where $z\neq 1$. Show that $\frac{1+z}{1-z} = i\cot \frac{\theta}{2}$. (Source: AoPS Precalculus)
+
+Let $z = a + bi$. We have
+
+\begin{align*}
+\frac{1 + z}{1 - z} &= \frac{1 + (a + bi)}{1 - (a + bi)} \\
+&= \frac{(1 + a) + bi}{(1 - a) - bi} \\
+&= \frac{((1 + a) + bi)((1 - a) + bi)}{((1 - a) - bi)((1 - a) + bi)} \\
+&= \frac{((1 + a) + bi)((1 - a) + bi)}{(1 - a)^2 + b^2} \\
+&= \frac{1 - a^2 + (1 + a)bi + (1 - a)bi - b^2}{(1 - a)^2 + b^2} \\
+&= \frac{1 - a^2 + 2bi - b^2}{(1 - a)^2 + b^2} \\
+&= \frac{1 - (a^2 + b^2) + 2bi}{1 - 2a + a^2 + b^2} \\
+&= \frac{1 - 1 + 2bi}{1 - 2a + 1} \\
+&= \frac{2bi}{2 - 2a} \\
+&= \frac{b}{1 - a}i \\
+\end{align*}
+
+Now $a = \cos \theta$ and $b = \sin \theta$. Making these substitutions we get
+
+$$ \frac{1 + z}{1 - z} = \frac{b}{1 - a}i = \frac{\sin \theta}{1 - \cos \theta} \, i$$.
+
+Applying the half-angle identity for $\cot$, we have
+
+$$ \frac{1 + z}{1 - z} = \frac{\sin \theta}{1 - \cos \theta} \, i = \boxed{i \cot \frac{\theta}{2}} $$.
