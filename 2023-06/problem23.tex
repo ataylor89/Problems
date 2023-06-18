@@ -1,0 +1,26 @@
+Problem 23: Let $x_n + i y_n = (1 + i \sqrt{3})^n$, where $x_n$ and $y_n$ are real and $n$ is a positive integer. If $x_{19} y_{91} + x_{91} y_{19} = 2^k \sqrt{3}$, compute $k$. (Source: ARML)
+
+We have
+
+$$ x_n + iy_n = \left(2\left(\frac{1}{2} + i\frac{\sqrt 3}{2}\right)\right)^n = 2^n \left(\frac{1}{2} + i\frac{\sqrt 3}{2} \right)^n = 2^n e^{n \pi i / 3} $$
+
+Thus $x_{19} + i y_{19} = 2^{19} e^{19 \pi i / 3} = 2^{19} e^{\pi i / 3}$ and $x_{91} + i y_{91} = 2^{91} e^{91 \pi i / 3} = 2^{91} e^{\pi i / 3}$.
+
+So
+
+\begin{align*}
+& x_{19} = 2^{19} \cos \frac{\pi}{3} = 2^{18} \\
+& y_{19} = 2^{19} \sin \frac{\pi}{3} = 2^{18} \sqrt{3} \\
+& x_{91} = 2^{91} \cos \frac{\pi}{3} = 2^{90} \\
+& y_{91} = 2^{19} \sin \frac{\pi}{3} = 2^{90} \sqrt{3} \\
+\end{align*}
+
+So
+
+\begin{align*}
+x_{19} y_{91} + x_{91} y_{19} &= 2^{18} \cdot 2^{90} \sqrt{3} + 2^{90} \cdot 2^{18} \sqrt{3} \\
+&= 2^{108} \sqrt 3 + 2^{108} \sqrt 3 \\
+&= 2^{109} \sqrt 3
+\end{align*}
+
+Thus $\boxed{k = 109}$.
