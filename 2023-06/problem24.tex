@@ -1,0 +1,32 @@
+Problem 24: The equation $z^6 + z^3 + 1 = 0$ has one complex root with argument (angle) $\theta$ between $90^\circ$ and $180^\circ$ in the complex plane. Determine the degree measure of $\theta$. (Source: AIME)
+
+Let $u = z^3$. Then $u^2 + u + 1 = 0$.
+
+\begin{align*}
+u &= \frac{-1 \pm \sqrt{1 - 4}}{2} \\
+&= \frac{-1 \pm \sqrt{-3}}{2} \\
+&= -\frac{1}{2} \pm \frac{\sqrt 3}{2}i
+\end{align*}
+
+Putting $u$ in exponential form, we get
+
+$$ u = \{e^{2 \pi i / 3}, e^{4 \pi i / 3}\} $$
+
+Now we can solve for $z$.
+
+\begin{align*}
+& z^3 = e^{2 \pi i / 3}
+\implies z = \{e^{2 \pi i / 9}, e^{8 \pi i / 9}, e^{14 \pi i / 9}\} \\
+& z^3 = e^{4 \pi i / 3}
+\implies z = \{e^{4 \pi i / 9}, e^{10 \pi i / 9}, e^{16 \pi i / 9}\}
+\end{align*}
+
+Combining all six solutions, we have
+
+$$ z = \{e^{2 \pi i / 9}, e^{4 \pi i / 9}, e^{8 \pi i / 9}, e^{10 \pi i / 9}, e^{14 \pi i / 9}, e^{16 \pi i / 9}\} $$
+
+Only one of these roots is between $90^{\circ}$ and $180^{\circ}$, and that root is $z = e^{8 \pi i / 9}$.
+
+The angle measure of $\frac{8\pi}{9}$ radians is equivalent to $160^{\circ}$.
+
+Thus $\boxed{\theta = 160^{\circ}}$.
