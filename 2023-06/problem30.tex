@@ -1,0 +1,37 @@
+Problem 30: Given that $z$ is a complex number such that $z + \dfrac{1}{z} = 2 \cos 3^\circ$, find the least integer that is greater than $z^{2000} + \dfrac{1}{z^{2000}}$. (Source: AIME)
+
+Solving for $z$, we get
+
+\begin{align*}
+z + \frac{1}{z} &= 2 \cos 3^\circ \\
+z^2 + 1 &= 2 \cos 3^\circ z \\
+z^2 - 2 \cos 3^\circ z + 1 &= 0 \\
+z &= \frac{2 \cos 3^\circ \pm \sqrt{4 \cos^2 3^\circ - 4}}{2} \\
+&= \frac{2 \cos 3^\circ \pm 2\sqrt{\cos^2 3^\circ - 1}}{2} \\
+&= \cos 3^\circ \pm \sqrt{\cos^2 3^\circ - 1} \\
+&= \cos 3^\circ \pm \sqrt{-\sin^2 3^\circ } \\
+&= \cos 3^\circ \pm i \sin 3^\circ \\
+&= \{e^{\pi i / 60}, e^{-\pi i / 60}\}
+\end{align*}
+
+Now we can plug these values into the expression $z^{2000} + \dfrac{1}{z^{2000}}$.
+
+\begin{align*}
+z^{2000} + \frac{1}{z^{2000}} &= (e^{\pi i / 60})^{2000} + \frac{1}{(e^{\pi i / 60})^{2000}} \\
+&= e^{2000 \pi i / 60} + \frac{1}{e^{2000 \pi i / 60}} \\
+&= e^{200 \pi i / 6} + \frac{1}{e^{200 \pi i / 6}} \\
+&= e^{100 \pi i / 3} + \frac{1}{e^{100 \pi i / 3}} \\
+&= e^{4 \pi i / 3} + \frac{1}{e^{4 \pi i / 3}} \\
+&= \frac{e^{8 \pi i / 3}}{e^{4 \pi i / 3}} + \frac{1}{e^{4 \pi i / 3}} \\
+&= \frac{e^{8 \pi i / 3} + 1}{e^{4 \pi i / 3}} \\
+&= \frac{e^{2 \pi i / 3} + 1}{e^{4 \pi i / 3}} \\
+&= \frac{-\frac{1}{2} + \frac{\sqrt 3}{2}i + 1}{-\frac{1}{2} - \frac{\sqrt 3}{2}i} \\
+&= \frac{\frac{1}{2} + \frac{\sqrt 3}{2}i}{-\frac{1}{2} - \frac{\sqrt 3}{2}i} \\
+&= -1
+\end{align*}
+
+Plugging in $z = e^{-\pi i / 60}$, we get the same value.
+
+The least integer greater than $\displaystyle -1$ is $\displaystyle 0$.
+
+Thus the answer is $\boxed{0}$.
