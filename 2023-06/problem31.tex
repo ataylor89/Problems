@@ -1,0 +1,37 @@
+Problem 31: If $w = \cos 40^\circ + i \sin 40^\circ$, then express $\left|w + 2w^2 + 3w^3 + \dots + 9w^9\right|^{-1}$ in the form $a\sin b$.
+
+(Source: AHSME)
+
+Let $S = w + 2w^2 + 3w^3 + \cdots + 9w^9$.
+
+Then $wS = w^2 + 2w^3 + 3w^4 + \cdots + 9w^{10}$, and
+
+\begin{align*}
+S - wS &= w + w^2 + w^3 + \cdots + w^9 - 9w^{10} \\
+S(1 - w) &= w + w^2 + w^3 + \cdots + w^9 - 9w^{10} \\
+&= -9w \\
+S &= - \frac{9w}{1 - w} \\
+&= \frac{9w}{w - 1} \\
+|S|^{-1} &= \frac{1}{|S|} \\
+&= \frac{|w - 1|}{|9w|} \\
+&= \frac{|w - 1|}{9} \\
+&= \frac{|\cos 40^\circ + i \sin 40^\circ - 1|}{9} \\
+&= \frac{|(\cos 40^\circ - 1) + i \sin 40^\circ|}{9} \\
+&= \frac{\sqrt{(\cos 40^\circ - 1)^2 + \sin^2 40^\circ}}{9} \\
+&= \frac{\sqrt{\cos^2 40^\circ - 2 \cos 40^\circ + 1 + \sin^2 40^\circ}}{9} \\
+&= \frac{\sqrt{2 - 2 \cos 40^\circ}}{9} \\
+\end{align*}
+
+Now we can use the half-angle identity for sine.
+
+\begin{align*}
+\sin \frac{\theta}{2} &= \sqrt{\frac{1 - \cos \theta}{2}} \\
+\sin \frac{40^\circ}{2} &= \sqrt{\frac{1 - \cos 40^\circ}{2}} \\
+\sin 20^\circ &= \frac{1}{\sqrt 2} \sqrt{1 - \cos 40^\circ} \\
+2 \sin 20^\circ &= \sqrt{2 - 2\cos 40^\circ} \\
+\frac{2}{9} \sin 20^\circ &= \frac{\sqrt{2 - 2 \cos 40^\circ}}{9}
+\end{align*}
+
+Thus
+
+$$ \boxed{|S|^{-1} = |w + 2w^2 + 3w^3 + \cdots + 9w^9|^{-1} = \frac{2}{9} \sin 20^\circ} $$
