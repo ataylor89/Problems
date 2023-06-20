@@ -1,0 +1,22 @@
+Problem 29: Prove de Moivre's theorem: $(\cos \theta  + i \sin \theta)^n = \cos n\theta  + i \sin n\theta$ for all positive integers $n$.
+
+We wish to prove by induction that $(\cos \theta  + i \sin \theta)^n = \cos n\theta  + i \sin n\theta$ for all positive integers $n$.
+
+Let $\theta$ be a real number. Suppose that $(\cos \theta  + i \sin \theta)^n = \cos n\theta  + i \sin n\theta$ for some positive integer $n$. Then
+
+\begin{align*}
+(\cos \theta  + i \sin \theta)^{n+1} &= (\cos \theta  + i \sin \theta)^n (\cos \theta  + i \sin \theta) \\ &\qquad \text{by the properties of exponents} \\
+&= (\cos n\theta  + i \sin n\theta) (\cos \theta  + i \sin \theta) \\ &\qquad \text{this follows from our inductive hypothesis} \\
+&= \cos \theta \cos n\theta  + i \cos \theta \sin n\theta + i \sin \theta \cos n\theta - \sin \theta \sin n\theta \\ &\qquad \text{expanding} \\
+&= \cos \theta \cos n\theta - \sin \theta \sin n\theta + i(\sin \theta \cos n\theta + \cos \theta \sin n\theta) \\ &\qquad \text{rearranging terms} \\
+&= \cos (\theta + n \theta) + i\sin(\theta + n \theta) \\ &\qquad \text{by the angle sum and angle difference identities} \\
+&= \cos((n+1)\theta) + i\sin ((n+1)\theta) \\ &\qquad \text{simplifying} \\
+\end{align*}
+
+This proves our inductive step. If $(\cos \theta  + i \sin \theta)^n = \cos n\theta  + i \sin n\theta$ for some positive integer $n$, then $(\cos \theta  + i \sin \theta)^{n+1} = \cos ((n+1)\theta)  + i \sin ((n+1)\theta)$.
+
+Now this proposition is true for the base case $n=1$, since $(\cos \theta  + i \sin \theta)^1 = \cos \theta  + i \sin \theta = \cos (1 \cdot \theta)  + i \sin (1 \cdot \theta)$.
+
+Since we have proven the base case ($n = 1$) and the inductive step, we have completed our proof by induction.
+
+Thus $(\cos \theta  + i \sin \theta)^n = \cos n\theta  + i \sin n\theta$ for all positive integers $n$.
