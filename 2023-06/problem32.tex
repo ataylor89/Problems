@@ -1,0 +1,47 @@
+Problem 32: Let $v$ and $w$ be distinct, randomly chosen roots of the equation $z^{1997} - 1 = 0$. Find the probability that $\sqrt{2 + \!\sqrt{3}} \le |v + w|$. (Source: AIME)
+
+Let $v = \cos x + i \sin x$ and $w = \cos y + i \sin y$ be two distinct roots of the equation $z^{1997} - 1 = 0$.
+
+We will start by assuming $\sqrt{2 + \sqrt 3} \leq |v + w|$. 
+
+\begin{align*}
+& \sqrt{2 + \sqrt 3} \leq |v + w| \\
+& \sqrt{2 + \sqrt 3} \leq |(\cos x + \cos y) + i (\sin x + \sin y)| \\
+& \sqrt{2 + \sqrt 3} \leq \sqrt{(\cos x + \cos y)^2 + (\sin x + \sin y)^2} \\
+& 2 + \sqrt 3 \leq (\cos x + \cos y)^2 + (\sin x + \sin y)^2 \\
+& 2 + \sqrt 3 \leq \cos^2 x + \cos^2 y + 2 \cos x \cos y + \sin^2 x + \sin^2 y + 2\sin x \sin y \\
+& 2 + \sqrt 3 \leq \cos^2 x + \sin^2 x + \cos^2 y + \sin^2 y + 2 \cos x \cos y + 2\sin x \sin y \\
+& 2 + \sqrt 3 \leq 2 + 2\cos x \cos y + 2\sin x \sin y \\
+& 2 + \sqrt 3 \leq 2 + 2(\cos x \cos y + \sin x \sin y) \\
+& 2 + \sqrt 3 \leq 2 + 2\cos (x - y) \\
+& \sqrt 3 \leq 2\cos (x - y) \\
+& \frac{\sqrt 3}{2} \leq \cos (x - y)
+\end{align*}
+
+We have arrived at the result $\dfrac{\sqrt 3}{2} \leq \cos (x - y)$. For this to be true, it is necessary that $-\dfrac{\pi}{6} \leq x - y \leq \dfrac{\pi}{6}$.
+
+Now $x$ is the argument of $v$, and $y$ is the argument of $w$. 
+
+Since $v$ and $w$ are 1997th roots of unity, we can write $x = 2k\pi / 1997$ and $y = 2l\pi / 1997$ for integers $0 \leq k, l \leq 1996$. 
+
+Since $v \neq w$, we know that $k \neq l$.
+
+Now we can solve for $k$ and $l$.
+
+\begin{align*}
+& -\frac{\pi}{6} \leq x - y \leq \frac{\pi}{6} \\
+& -\frac{\pi}{6} \leq \frac{2k\pi}{1997} - \frac{2l\pi}{1997} \leq \frac{\pi}{6} \\
+& -\frac{\pi}{6} \leq \frac{2(k-l)\pi}{1997} \leq \frac{\pi}{6} \\
+& -\frac{1997}{12} \leq k - l \leq \frac{1997}{12} \\
+& -166 \leq k - l \leq 166 &\quad \text{we are able to round since k and l are integers} \\
+\end{align*}
+
+We know that the difference $k - l$ is in the range of integers $[-166, 0) \cup (0, +166]$.
+
+After randomly choosing a value for $k$, there are $332$ values of $l$ that meet this requirement, out of $1996$ possible values of $l$.
+
+Thus the probability that $-166 \leq k - l \leq 166$ (for two distinct integers $0 \leq k, l \leq 1996$) is $\dfrac{332}{1996}$.
+
+This condition is strong enough that it implies both $-\dfrac{\pi}{6} \leq x - y \leq \dfrac{\pi}{6}$ and $\sqrt{2 + \sqrt 3} \leq |v + w|$.
+
+Thus the probability that $\sqrt{2 + \sqrt 3} \leq |v + w|$ is $\boxed{\frac{332}{1996} = \frac{83}{499}}$
