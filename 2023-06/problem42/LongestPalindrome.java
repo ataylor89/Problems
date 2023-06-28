@@ -63,25 +63,18 @@ public class LongestPalindrome {
         return output;
     }
 
-    public static void test(String testCase) {
-        System.out.println("Test case: " + testCase);
+    public static void main(String[] args) {
+        if (args.length != 1) {
+            System.out.println("Usage: java LongestPalindrome <string>");
+            return;
+        }
+        String input = args[0];
+        System.out.println("Input: " + input);
         long start = System.currentTimeMillis();
-        LongestPalindrome result = new LongestPalindrome(testCase);
+        LongestPalindrome output = new LongestPalindrome(input);
         long time = System.currentTimeMillis() - start;
-        System.out.println("Longest palindrome: " + result);
+        System.out.println("Output: " + output);
         System.out.printf("Time taken: %d ms\n", time);
         System.out.println("====================");
-    }
-
-    public static void main(String[] args) {
-        test("x");
-        test("xx");
-        test("xyyx");
-        test("1xyyx2");
-        test("abcdedcba");
-        test("xx1abcdedcba1y");
-        test("");
-        test("  abba");
-        test("The weather is very nice today. The sky is clear. 1abcdedcba1. The sun is shining. abcdedcba.");
     }
 }
