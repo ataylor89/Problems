@@ -43,10 +43,10 @@ public class LongestPalindrome {
             List<Integer> lst = m.get(c);
             for (int i = 0; i < lst.size(); i++) {
                 for (int j = i+1; j < lst.size(); j++) {
-                    int index1 = lst.get(i);
-                    int index2 = lst.get(j);
-                    if (index2 - index1 + 1 > output.length()) {
-                        String substring = input.substring(index1, index2 + 1);
+                    int begin = lst.get(i);
+                    int end = lst.get(j);
+                    if (end - begin + 1 > output.length()) {
+                        String substring = input.substring(begin, end + 1);
                         if (isPalindrome(substring)) {
                             output = substring;
                         }
