@@ -75,6 +75,5 @@ public class LongestPalindrome {
         long time = System.currentTimeMillis() - start;
         System.out.println("Output: " + output);
         System.out.printf("Time taken: %d ms\n", time);
-        System.out.println("====================");
     }
 }
