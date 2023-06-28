@@ -36,10 +36,13 @@ public class LongestPalindrome {
     }
 
     private void compute() {
+        if (input.isEmpty()) 
+            return;
+        output = input.substring(0, 1);
         for (Character c : m.keySet()) {
             List<Integer> lst = m.get(c);
             for (int i = 0; i < lst.size(); i++) {
-                for (int j = i; j < lst.size(); j++) {
+                for (int j = i+1; j < lst.size(); j++) {
                     int index1 = lst.get(i);
                     int index2 = lst.get(j);
                     if (index2 - index1 + 1 > output.length()) {
