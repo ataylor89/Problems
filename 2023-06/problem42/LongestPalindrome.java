@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class LongestPalindrome {
     private String input, output = "";
-    private Map<Character, List<Integer>> m;
+    private Map<Character, List<Integer>> map;
 
     public LongestPalindrome(String input) {
         this.input = input;
@@ -14,12 +14,12 @@ public class LongestPalindrome {
     }
 
     private void populate() {
-        m = new HashMap<>();
+        map = new HashMap<>();
         for (int i = 0; i < input.length(); i++) {
             Character c = input.charAt(i);
-            if (!m.containsKey(c)) 
-                m.put(c, new ArrayList<Integer>());
-            m.get(c).add(i);
+            if (!map.containsKey(c)) 
+                map.put(c, new ArrayList<Integer>());
+            map.get(c).add(i);
         }
     }
 
@@ -36,13 +36,15 @@ public class LongestPalindrome {
     }
 
     private void compute() {
-        if (input.isEmpty()) 
+        if (input.isEmpty()) { 
             return;
+        }
         output = input.substring(0, 1);
-        for (Character c : m.keySet()) {
-            List<Integer> lst = m.get(c);
-            for (int i = 0; i < lst.size(); i++) {
-                for (int j = i+1; j < lst.size(); j++) {
+        for (Character c : map.keySet()) {
+            List<Integer> lst = map.get(c);
+            int len = lst.size();
+            for (int i = 0; i < len; i++) {
+                for (int j = len-1; j > i; j--) {
                     int begin = lst.get(i);
                     int end = lst.get(j);
                     if (end - begin + 1 > output.length()) {
@@ -63,8 +65,12 @@ public class LongestPalindrome {
 
     public static void test(String testCase) {
         System.out.println("Test case: " + testCase);
+        long start = System.currentTimeMillis();
         LongestPalindrome result = new LongestPalindrome(testCase);
+        long time = System.currentTimeMillis() - start;
         System.out.println("Longest palindrome: " + result);
+        System.out.printf("Time taken: %d ms\n", time);
+        System.out.println("====================");
     }
 
     public static void main(String[] args) {
@@ -76,5 +82,6 @@ public class LongestPalindrome {
         test("xx1abcdedcba1y");
         test("");
         test("  abba");
+        test("The weather is very nice today. The sky is clear. 1abcdedcba1. The sun is shining. abcdedcba.");
     }
 }
