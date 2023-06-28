@@ -32,8 +32,8 @@ int main(int argc, char** argv) {
     }
     Solution s;
     int x = atoi(argv[1]);
-    bool isPalindrome = s.isPalindrome(x);
-    if (isPalindrome)
+    bool is_palindrome = s.isPalindrome(x);
+    if (is_palindrome)
         cout << x << " is a palindrome" << endl;
     else
         cout << x << " is not a palindrome" << endl;
