@@ -1,0 +1,27 @@
+Problem 1: Verify the formula for the circumference of a circle.
+
+The formula for the circumference of a circle is $C = 2\pi r$, where $r$ is the radius of the circle and $C$ is the circumference. We can verify this formula using parametric equations.
+
+The parametric equations that describe a circle are $x(t) = r\cos t$ and $y(t) = r\sin t$ where $t$ is a real number such that $0 \leq t < 2 \pi$. We can take the derivatives of these equations to get the speed of a particle that is moving along the circle. The speed of a particle that is moving along the circle has an x-component and a y-component. The x-component is given by the equation $x'(t) = -r\sin t$ and the y-component is given by the equatino $y'(t) = r\cos t$. The speed of the particle is the hypotenuse of a right triangle, where one leg is the x-component of it speed and another leg is the y-component of its speed. Let $v(t)$ be the speed of a particle moving along the circle when it makes an angle $t$ with the origin of the Cartesian plane. Then
+
+\begin{align*}
+v(t) &= \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2} \\
+&= \sqrt{\left(-r\sin t\right)^2 + \left(r\cos t\right)^2} \\
+&= \sqrt{r^2\sin^2 t + r^2 \cos^2 t} \\
+&= \sqrt{r^2(\sin^2 t + \cos^2 t)} \\
+&= \sqrt{r^2(\sin^2 t + \cos^2 t)} \\
+&= \sqrt{r^2} \\
+&= r
+\end{align*}
+
+We have discovered that the speed of a particle moving along the circle is a constant. That is, $v(t) = r$. Since distance is the integral of speed, we can integrate the speed of the particle from $t = 0$ to $t = 2\pi$ to get the circumference of the circle.
+
+\begin{align*}
+C &= \int_{0}^{2\pi} v(t) dt \\
+&= \int_{0}^{2\pi} r \, dt \\
+&= rt \Bigg|_{0}^{2\pi} \\
+&= 2\pi r - 0r \\
+&= \boxed{2\pi r}
+\end{align*}
+
+We have now verified the formula for the circumference of a circle. We did this by constructing an arbitrary circle of radius $r$, where $r > 0$, and considering a particle that is traveling on the path of this circle. The speed of the particle at any angle $t$ is given by the equation $v(t) = r$. The speed of the particle is a constant (although its $x$ and $y$ components vary with $t$). The distance this particle travels can be calculated by integrating the speed of the particle from any angle $t = a$ to any other angle $t = b$. When we integrate the speed of the particle from $t = 0$ to $t = 2\pi$, we get the distance this particle travels after making one revolution around the circle. This distance corresponds to the circumference of the circle. We have used the fact that distance is the integral of speed to compute the circumference of a circle.
