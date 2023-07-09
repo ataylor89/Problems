@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\begin{document}
+Problem 5: The yield of one bundle of inferior rice, two bundles of medium-grade rice, and three bundles of superior rice is 39 dou of grain (1 dou ~ 2 liters). The yield of one bundle of inferior rice, three bundles of medium-grade rice, and two bundles of superior rice, is 34 dou. The yield of three bundles of inferior rice, two bundles of medium-grade rice, and one bundle of superior rice, is 26 dou. What is the yield of one bundle of each grade of rice? \\
+
+(Source: Linear Algebra with Applications, chapter 1 section 1) \\
+
+We can turn this word problem into a system of equations.
+
+\begin{align*}
+x + 2y + 3z &= 39 \\
+x + 3y + 2z &= 34 \\
+3x + 2y + z &= 26
+\end{align*}
+
+We have three equations and three variables. We can use Gaussian elimination to solve for $x$, $y$, and $z$.
+
+\begin{align*}
+\mathop{\rm rref} & \begin{pmatrix}
+1 & 2 & 3 & 39 \\ \\
+1 & 3 & 2 & 34 \\ \\
+3 & 2 & 1 & 26
+\end{pmatrix} \\
+= & \begin{pmatrix}
+1 & 2 & 3 & 39 \\ \\
+0 & 1 & -1 & -5 \\ \\
+3 & 2 & 1 & 26
+\end{pmatrix} \quad &\text{Row2 = Row2 - Row1}  \\
+= & \begin{pmatrix}
+1 & 2 & 3 & 39 \\ \\
+0 & 1 & -1 & -5 \\ \\
+0 & -4 & -8 & -91
+\end{pmatrix} \quad &\text{Row3 = Row3 - 3 * Row1} \\
+= & \begin{pmatrix}
+1 & 2 & 3 & 39 \\ \\
+0 & 1 & -1 & -5 \\ \\
+0 & 0 & -12 & -111
+\end{pmatrix} \quad &\text{Row3 = Row3 + 4 * Row2} \\
+= & \begin{pmatrix}
+1 & 0 & 5 & 49 \\ \\
+0 & 1 & -1 & -5 \\ \\
+0 & 0 & -12 & -111
+\end{pmatrix} &\text{Row1 = Row1 - 2 * Row2} \\
+= & \begin{pmatrix}
+1 & 0 & 5 & 49 \\ \\
+0 & 1 & -1 & -5 \\ \\
+0 & 0 & 1 & \frac{111}{12}
+\end{pmatrix} \quad &\text{Row3 = Row3 / -12} \\
+= & \begin{pmatrix}
+1 & 0 & 5 & 49 \\ \\
+0 & 1 & 0 & -5 + \frac{111}{12} \\ \\
+0 & 0 & 1 & \frac{111}{12}
+\end{pmatrix} \quad &\text{Row2 = Row2 + Row3} \\
+= & \begin{pmatrix}
+1 & 0 & 0 & 49 - \frac{555}{12} \\ \\
+0 & 1 & 0 & -5 + \frac{111}{12} \\ \\
+0 & 0 & 1 & \frac{111}{12}
+\end{pmatrix} \quad &\text{Row1 = Row1 - 5 * Row3} \\
+\end{align*}
+
+We get $x = 49 - \dfrac{555}{12}$, $y = -5 + \dfrac{111}{12}$, and $z = \dfrac{111}{12}$. \\
+
+Let's check our solution by plugging these values into the first equation.
+
+\begin{align*}
+x + 2y + 3z &= 39 \\
+49 - \frac{555}{12} + 2(-5 + \frac{111}{12}) + 3 \frac{111}{12} &= 39 \\
+49 - \frac{555}{12} + -10 + \frac{222}{12} + \frac{333}{12} &= 39 \\
+49 + -10 + -\frac{555}{12} + \frac{555}{12} &= 39 \\
+39 &= 39
+\end{align*}
+
+It works for the first equation, which gives me enough confidence to proceed. \\
+
+The yield of one bundle of inferior rice is $\boxed{49 - \dfrac{555}{12} \text{ dou}.}$ The yield of one bundle of medium-grade rice is $\boxed{-5 + \dfrac{111}{12} \text{ dou}.}$ The yield of one bundle of superior rice is $\boxed{\dfrac{111}{12} \text{ dou}.}$
+
+\end{document}
