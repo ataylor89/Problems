@@ -3,3 +3,8 @@
 1 Βίβλος γενέσεως Ἰησοῦ Χριστοῦ υἱοῦ Δαυὶδ υἱοῦ Ἀβραάμ.
 
 The story of the birth of Jesus Christ, the son of David, the son of Abraham.
+
+Vocabulary
+1. Βίβλος: Book, story; 2nd declension nominative singular
+2. γενέσεως: Birth, generation; 3rd declension genitive singular
+3. υἱός: Son; 2nd declension nominative singular
