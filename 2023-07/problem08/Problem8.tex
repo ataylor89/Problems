@@ -1,0 +1,48 @@
+Problem 8: Emile and Gertrude are brother and sister. Emile has twice as many sisters as brothers, and Gertrude has just as many brothers as sisters. How many children are there in this family?
+
+(Source: Linear Algebra with Applications, Exercise 1.1.22)
+
+Let $B$ and $S$ represent the number of brothers and sisters in the family. Emile has $B - 1$ brothers and $S$ sisters. Based on the data we are given, $S = 2(B-1)$. Gertrude has $S - 1$ sisters and $B$ brothers. Based on the problem data, $S - 1 = B$. These equations form a system of linear equations.
+
+\begin{align*}
+S &= 2 (B-1) \\
+S - 1 &= B
+\end{align*}
+
+Rearranging, we get
+
+\begin{align*}
+\frac{S}{2} - B &= -1 \\
+S - B &= 1
+\end{align*}
+
+We can solve this system by Gaussian elimination.
+
+\begin{align*}
+\mathop{\rm rref} & \begin{pmatrix}
+\frac{1}{2} & -1 & -1 \\
+1 & -1 & 1
+\end{pmatrix} \\
+= \mathop{\rm rref} & \begin{pmatrix}
+1 & -2 & -2 \\
+1 & -1 & 1
+\end{pmatrix} & \text{Row1 = Row1 * 2} \\
+= \mathop{\rm rref} & \begin{pmatrix}
+1 & -2 & -2 \\
+0 & 1 & 3
+\end{pmatrix} & \text{Row2 = Row2 - Row1} \\
+= \mathop{\rm rref} & \begin{pmatrix}
+1 & -2 & -2 \\
+0 & 2 & 6
+\end{pmatrix} & \text{Row2 = Row2 * 2} \\
+= \mathop{\rm rref} & \begin{pmatrix}
+1 & 0 & 4 \\
+0 & 2 & 6
+\end{pmatrix} & \text{Row1 = Row1 + Row2} \\
+= & \begin{pmatrix}
+1 & 0 & 4 \\
+0 & 1 & 3
+\end{pmatrix} & \text{Row2 = Row2 / 2} \\
+\end{align*}
+
+After applying the method of Gaussian elimination, we arrive at the result $S = 4$ and $B = 3$. Thus there are $\boxed{7}$ children in the family.
