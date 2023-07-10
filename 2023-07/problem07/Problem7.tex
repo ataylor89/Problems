@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage{amssymb, amsmath, amsthm}
+
+\begin{document}
+Problem 7: The sums of any two of three real numbers are 24, 28, and 30. Find these three numbers. \\
+
+(Source: Linear Algebra with Applications, Exercise 1.1.21) \\
+
+Let $x$, $y$, and $z$ stand for the three real numbers. Using what we're given, we know that
+
+\begin{align*}
+x + y &= 24 \\
+x + z &= 28 \\
+y + z &= 30
+\end{align*}
+
+We can solve for $x$, $y$, and $z$ by Gaussian elimination.
+
+\begin{align*}
+& \mathop{\rm rref} \begin{pmatrix}
+1 & 1 & 0 & 24 \\
+1 & 0 & 1 & 28 \\
+0 & 1 & 1 & 30
+\end{pmatrix} \\
+= & \mathop{\rm rref} \begin{pmatrix}
+2 & 1 & 1 & 52 \\
+1 & 0 & 1 & 28 \\
+0 & 1 & 1 & 30
+\end{pmatrix} & \text{Row1 = Row1 + Row2} \\
+= & \mathop{\rm rref} \begin{pmatrix}
+2 & 0 & 0 & 22 \\
+1 & 0 & 1 & 28 \\
+0 & 1 & 1 & 30
+\end{pmatrix} & \text{Row1 = Row1 - Row3} \\
+= & \mathop{\rm rref} \begin{pmatrix}
+1 & 0 & 0 & 11 \\
+1 & 0 & 1 & 28 \\
+0 & 1 & 1 & 30
+\end{pmatrix} & \text{Row1 = Row1 / 2} \\
+= & \mathop{\rm rref} \begin{pmatrix}
+1 & 0 & 0 & 11 \\
+1 & 0 & 1 & 28 \\
+-1 & 1 & 0 & -2
+\end{pmatrix} & \text{Row3 = Row3 - Row2} \\
+= & \mathop{\rm rref} \begin{pmatrix}
+1 & 0 & 0 & 11 \\
+1 & 0 & 1 & 28 \\
+0 & 1 & 0 & 9
+\end{pmatrix} & \text{Row3 = Row3 + Row1} \\
+= & \mathop{\rm rref} \begin{pmatrix}
+1 & 0 & 0 & 11 \\
+0 & 1 & 0 & 9 \\
+1 & 0 & 1 & 28 
+\end{pmatrix} & \text{Swap Row2 and Row3} \\
+= & \mathop{\rm rref} \begin{pmatrix}
+1 & 0 & 0 & 11 \\
+0 & 1 & 0 & 9 \\
+0 & 0 & 1 & 17 
+\end{pmatrix} & \text{Row3 = Row3 - Row1} \\
+\end{align*}
+
+We arrive at the solutions $x = 11$, $y = 9$, and $z = 17$. \\
+
+The three numbers that we seek are $9$, $11$, and $17$.
+\end{document}
