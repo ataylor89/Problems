@@ -1,0 +1,66 @@
+Problem 10: Find the circle that runs through the points $(5, 5)$, $(4, 6)$, and $(6, 2)$. Write your equation in the form $(x - a)^2 + (y - b)^2 = c^2$. Find the center and radius of this circle.
+
+(Source: Linear Algebra with Applications, Exercise 1.1.39)
+
+The equation of a circle with center $(a, b)$ and radius $c$ is
+
+$$(x - a)^2 + (y - b)^2 = c^2$$.
+
+After expanding, and rearranging terms, we get
+
+\begin{align*}
+(x - a)^2 + (y - b)^2 &= c^2 \\
+x^2 - 2ax + a^2 + y^2 - 2by + b^2 &= c^2 \\
+x^2 - 2ax + a^2 + y^2 - 2by + b^2 - c^2 &= 0
+\end{align*}
+
+Now we can plug in the coordinates of our three points to get a system of three equations.
+
+\begin{align*}
+5^2 - 2a(5) + a^2 + 5^2 - 2b(5) + b^2 - c^2 &= 0 \\
+4^2 - 2a(4) + a^2 + 6^2 - 2b(6) + b^2 - c^2 &= 0 \\
+6^2 - 2a(6) + a^2 + 2^2 - 2b(2) + b^2 - c^2 &= 0
+\end{align*}
+
+Simplifying, we get
+
+\begin{align*}
+-10a + a^2 - 10b + b^2 - c^2 &= -50 & \text{Equation 1} \\
+-8a + a^2 - 12b + b^2 - c^2 &= -52 & \text{Equation 2} \\
+-12a + a^2 - 4b + b^2 - c^2 &= -40& \text{Equation 3}
+\end{align*}
+
+We can subtract Equation 1 from Equations 2 and 3 to eliminate some variables.
+
+\begin{align*}
+2a - 2b &= -2 & \text{Equation 2} \\
+-2a + 6b &= 10 & \text{Equation 3}
+\end{align*}
+
+Now we can add equations 2 and 3 to solve for $b$.
+
+\begin{align*}
+4b &= 8 \\
+b &= 2 \\
+2a - 2(2) &= -2 \\
+a - 2 &= -1 \\
+a &= 1
+\end{align*}
+
+We arrive at the result $a = 1$ and $b = 2$. Let's plug this into equation 1 to solve for $c$.
+
+\begin{align*}
+-10a + a^2 - 10b + b^2 - c^2 &= -50 & \text{Equation 1} \\
+-10(1) + 1^2 - 10(2) + 2^2 - c^2 &= -50 \\
+-10 + 1 - 20 + 4 - c^2 &= -50 \\
+-25 - c^2 &= -50 \\
+-c^2 &= -25 \\
+c^2 &= 25 \\
+c &= 5
+\end{align*}
+
+Finally, we get $c = 5$.
+
+Thus the circle we seek has center $(1, 2)$ and radius $5$, and is given by the equation
+
+$$ (x - 1)^2 + (y - 2)^2 = 25 $$
