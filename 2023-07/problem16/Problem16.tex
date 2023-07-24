@@ -1,0 +1,72 @@
+Problem 16: Describe the graph of the equation $r = \cos \theta + \sin \theta$.
+
+(Source: AoPS Calculus)
+
+First let's find the slope of the line tangent to $r = \cos \theta + \sin \theta$ at any given point $\theta$.
+
+$$ \frac{dy}{dx} = \frac{dy/d\theta}{dx/d\theta} $$
+
+To compute $dy/d\theta$ and $dx/d\theta$, we need equations for $y$ and $x$.
+
+\begin{align*}
+y &= r \sin \theta \\
+&= \left(\cos \theta + \sin \theta\right) \sin \theta \\
+&= \cos \theta \sin \theta + \sin^2 \theta
+\end{align*}
+
+\begin{align*}
+x &= r \cos \theta \\
+&= \left(\cos \theta + \sin \theta\right) \cos \theta \\
+&= \cos^2 \theta + \cos \theta \sin \theta
+\end{align*}
+
+Now we are ready to compute $dy/d\theta$ and $dx/d\theta$.
+
+\begin{align*}
+\frac{dy}{d\theta} &= \frac{d}{d\theta} \left(\cos \theta \sin \theta + \sin^2 \theta\right) \\
+&= -\sin^2 \theta + \cos^2 \theta + 2 \sin \theta \cos \theta & \text{by the product rule and the chain rule}
+\end{align*}
+
+\begin{align*}
+\frac{dx}{d\theta} &= \frac{d}{d\theta} \left(\cos^2 \theta + \cos \theta \sin \theta\right) \\
+&= -2 \sin \theta \cos \theta + -\sin^2 \theta + \cos^2 \theta & \text{by the product rule and the chain rule}
+\end{align*}
+
+Thus
+
+\begin{align*}
+\frac{dy}{dx} &= \frac{dy/d\theta}{dx/d\theta} \\
+&= \frac{-\sin^2 \theta + \cos^2 \theta + 2 \sin \theta \cos \theta}{-2 \sin \theta \cos \theta + -\sin^2 \theta + \cos^2 \theta}
+\end{align*}
+
+Setting $dy/d\theta = 0$, we get
+
+\begin{align*}
+-\sin^2 \theta + \cos^2 \theta + 2 \sin \theta \cos \theta &= 0 \\
+\sin^2 \theta + \cos^2 \theta + 2 \sin \theta \cos \theta &= 2 \sin^2 \theta \\
+\left( \cos \theta + \sin \theta \right)^2 &= 2 \sin^2 \theta \\
+\cos \theta + \sin \theta &= \pm \sqrt 2 \sin \theta \\
+\cos \theta &= \pm \sqrt 2 \sin \theta - \sin \theta \\
+\cos \theta &= \sin \theta \left( \pm \sqrt 2 - 1 \right) \\
+1 &= \tan \theta \left( \pm \sqrt 2 - 1 \right) \\
+\tan \theta &= \frac{1}{\pm \sqrt 2 - 1} \\
+\tan \theta &= \Bigg\{ \sqrt{2} + 1, 1 - \sqrt 2 \Bigg\} \\
+\theta &= \Bigg\{ 1.17809725, -0.392699082 \Bigg\}
+\end{align*}
+
+The tangent line to the graph of $r = \cos \theta + \sin \theta$ has a slope of $0$ at $\theta_1 = 1.17809725$ and $\theta_2 = -0.392699082$.
+
+The rectangular coordinates corresponding to these polar coordinates are
+
+\begin{align*}
+(x_1, y_1) &\approx (0.5, 1.2071067811865475) \\
+(x_2, y_2) &\approx (0.5, -0.2071067811865475)
+\end{align*}
+
+The graph of $r = \cos \theta + \sin \theta$ appears to be a circle centered at $(0.5, 0.5)$ with a radius of $0.7071067811865475$.
+
+I have not proven that the graph of $r = \cos \theta + \sin \theta$ is a circle, but it appears to be a circle.
+
+What I have done is find the points on the graph of $r = \cos \theta + \sin \theta$ where the tangent line has a slope of 0. These points represent the coordinates on the graph where the $y$-values are smallest and largest. This allows us to find the radius of the circle (assuming that the graph is in fact a circle). It also allows us to find the center of the circle (since the diameter passes through the center).
+
+Assuming that $r = \cos \theta + \sin \theta$ is the graph of a circle, we are able to conclude that the circle has a center of $(0.5, 0.5)$ in rectangular coordinates and a radius of approximately $0.7071067811865475$.
