@@ -1,0 +1,25 @@
+Problem 15: Find the equation, in polar coordinates, of the line passing through $(x_1, y_1)$ with slope $m$.
+
+(Source: AoPS Calculus)
+
+We can start with the equation of this line in point-slope form.
+
+$$ y - y_1 = m(x - x_1) $$
+
+Now we can substitute $r \sin \theta$ for $y$ and $r \cos \theta$ for $x$.
+
+$$ r \sin \theta - y_1 = m(r \cos \theta - x_1) $$
+
+We can manipulate this equation to get $r$ as a function of $\theta$.
+
+\begin{align*}
+r \sin \theta - y_1 &= m(r \cos \theta - x_1) \\
+r \sin \theta - y_1 &= mr \cos \theta - m x_1 \\
+r \sin \theta - mr \cos \theta &= y_1 - m x_1 \\
+r \left(\sin \theta - m \cos \theta\right) &= y_1 - m x_1 \\
+r &= \frac{y_1 - m x_1}{\sin \theta - m \cos \theta}
+\end{align*}
+
+Thus the equation of the line, in polar coordinates, is
+
+$$ \boxed{r = \frac{y_1 - m x_1}{\sin \theta - m \cos \theta}} $$
