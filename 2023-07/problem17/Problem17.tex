@@ -1,0 +1,55 @@
+Problem 17: Prove that the polar equation $r = \cos t + \sin t$ is the graph of a circle. (Source: AoPS Calculus)
+
+Converting from polar coordinates to rectangular coordinates, we have
+
+\begin{align*}
+x(t) &= r \cos t \\
+&= (\cos t + \sin t) \cos t \\
+&= \cos^2 t + \cos t \sin t \\
+\end{align*}
+
+\begin{align*}
+y(t) &= r \sin t \\
+&= (\cos t + \sin t) \sin t \\
+&= \cos t \sin t + \sin^2 t \\
+\end{align*}
+
+We hypothesize that $r = \cos t + \sin t$ is a circle centered at $(1/2, 1/2)$. Our hypothesis is true if and only if
+
+$$ (x(t) - 1/2)^2 + (y(t) - 1/2)^2 = R^2 $$
+
+for some constant $R \in \mathbb{R}$. We will solve for $R$ and show that $R$ is a constant.
+
+\begin{align*}
+(x - 1/2)^2 + (y - 1/2)^2 &= R^2 \\
+x^2 - x + 1/4 + y^2 - y + 1/4 &= R^2 \\
+x^2 - x + y^2 - y + 1/2 &= R^2
+\end{align*}
+
+Substituting $\cos t \sin t + \cos^2 t$ for $x$ and $\cos t \sin t + \sin^2 t$ for $y$, we get
+
+\begin{align*}
+x^2 - x + y^2 - y + 1/2 &= R^2 \\
+(\cos t \sin t + \cos^2 t)^2 - \cos t \sin t - \cos^2 t + (\cos t \sin t + \sin^2 t)^2 - \cos t \sin t - \sin^2 t + 1/2 &= R^2 \\
+(\cos t \sin t + \cos^2 t)^2 + (\cos t \sin t + \sin^2 t)^2 - 2\cos t \sin t - 1 + 1/2 &= R^2 \\
+(\cos t \sin t + \cos^2 t)^2 + (\cos t \sin t + \sin^2 t)^2 - 2\cos t \sin t - 1/2 &= R^2 \\
+\cos^2 t \sin^2 t + 2 \cos^3 t \sin t + \cos^4 t + \cos^2 t \sin^2 t + \cos t \sin^3 t + \sin^4 t - 2\cos t \sin t - 1/2 &= R^2 \\
+\cos^2 t \sin^2 t + \cos^4 t + \cos^2 t \sin^2 t + \sin^4 t + 2\cos t \sin^3 t + 2 \cos^3 t \sin t - 2\cos t \sin t - 1/2 &= R^2 \\
+\cos^2 t (\sin^2 t + \cos^2 t) + \sin^2 t(\cos^2 t + \sin^2 t) + 2\cos t \sin^3 t + 2 \cos^3 t \sin t - 2\cos t \sin t - 1/2 &= R^2 \\
+\cos^2 t + \sin^2 t + 2\cos t \sin^3 t + 2 \cos^3 t \sin t - 2\cos t \sin t - 1/2 &= R^2 \\
+1 + 2\cos t \sin^3 t + 2 \cos^3 t \sin t - 2\cos t \sin t - 1/2 &= R^2 \\
+2\cos t \sin^3 t + 2 \cos^3 t \sin t - 2\cos t \sin t + 1/2 &= R^2 \\
+\cos t \sin t (2\sin^2 t + 2 \cos^2 t - 2) + 1/2 &= R^2 \\
+\cos t \sin t (2(\sin^2 t + \cos^2 t) - 2) + 1/2 &= R^2 \\
+\cos t \sin t (2 - 2) + 1/2 &= R^2 \\
+1/2 &= R^2 \\
+R &= \sqrt{1/2} \\
+R &= \frac{1}{\sqrt 2} \\
+R &= \frac{\sqrt 2}{2}
+\end{align*}
+
+We have shown that $R$ is a constant, and that $R = \dfrac{\sqrt 2}{2}$. Thus the graph of $r = \cos t + \sin t$ is a circle centered at $\displaystyle \left(\frac{1}{2}, \frac{1}{2}\right)$ with a radius of $\dfrac{\sqrt 2}{2}$. We can represent this circle in rectangular coordinates with the equation
+
+$$ \left(x - \frac{1}{2}\right)^2 + \left(y - \frac{1}{2}\right)^2 = \frac{1}{2} $$
+
+The rectangular equation $\displaystyle \left(x - \frac{1}{2}\right)^2 + \left(y - \frac{1}{2}\right)^2 = \frac{1}{2}$ and the polar equation $r = \cos \theta + \sin \theta$ both describe the same circle, a circle centered at $(1/2, 1/2)$ with a radius of $\dfrac{\sqrt 2}{2}$.
