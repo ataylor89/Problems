@@ -1,0 +1,18 @@
+Problem 18: Prove that the polar equation $r = a \cos t + b \sin t$, where $a$, $b$, and $t$ are real numbers, and either $a$ or $b$ is nonzero, is the graph of a circle. (Source: AoPS Calculus)
+
+We can show that the polar equation $r = a \cos t + b \sin t$ is the graph of a circle by finding an equation that proves it's a circle.
+
+Let $x(t) = r \cos t$ and $y(t) = r \sin t$. These parametric equations describe the same figure as the polar equation.
+
+We hypothesize that the figure is a circle centered at $(a/2, b/2)$. If $(x - a/2)^2 + (y - b/2)^2$ is equal to a constant, then the figure is indeed a circle.
+
+\begin{align*}
+\left(x - \frac{a}{2}\right)^2 + \left(y - \frac{b}{2}\right)^2 &= x^2 - ax + \frac{a^2}{4} + y^2 - by + \frac{b^2}{4} \\
+&= (r\cos t)^2 - a(r \cos t) + \frac{a^2}{4} + (r \sin t)^2 - b(r \sin t) + \frac{b^2}{4} \\
+&= r^2(\cos^2 t + \sin^2 t) - r(a \cos t + b \sin t) + \frac{a^2 + b^2}{4} \\
+&= r^2 - r(a \cos t + b \sin t) + \frac{a^2 + b^2}{4} \\
+&= (a \cos t + b \sin t)^2 - (a \cos t + b \sin t)^2 + \frac{a^2 + b^2}{4} \\
+&= \frac{a^2 + b^2}{4}
+\end{align*}
+
+We have shown that $\left(x - \dfrac{a}{2}\right)^2 + \left(y - \dfrac{b}{2}\right)^2 = \dfrac{a^2 + b^2}{4}$. This equation proves that the polar equation $r = a \cos t + b \sin t$ is the graph of a circlc centered at $\left(\dfrac{a}{2}, \dfrac{b}{2}\right)$ with a radius of $\dfrac{\sqrt{a^2 + b^2}}{2}$.
