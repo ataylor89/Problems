@@ -1,0 +1,17 @@
+Problem 19: Describe the graph of $r = a \cos \theta + b \sin \theta$, where $a$ and $b$ are positive real numbers, and find the slope of the tangent line at the point where $\theta = 0$. (Source: AoPS Calculus)
+
+The graph of $r = a \cos \theta + b \sin \theta$ is the graph of a circle centered at $\left(\frac{a}{2}, \frac{b}{2}\right)$ with a radius of $\dfrac{\sqrt{a^2 + b^2}}{2}$.
+
+We will compute the slope of the tangent line in terms of $\theta$ to get the slope at $\theta = 0$. To do so, we will differentiate the parametric equations $x = r \cos \theta = a \cos^2 \theta + b \cos \theta \sin \theta$ and $y = r \sin \theta = a \cos \theta \sin \theta + b \sin^2 \theta$.
+
+\begin{align*}
+\frac{dy}{d\theta} &= -2b \cos \theta \sin \theta - a \sin^2 \theta + a \cos^2 \theta \\
+\frac{dx}{d\theta} &= - 2a \cos \theta \sin \theta - b \sin^2 \theta + b \cos^2 \theta
+\end{align*}
+
+\begin{align*}
+\frac{dy}{dx} &= \frac{\frac{dy}{d\theta}}{\frac{dx}{d\theta}} \\
+&= \frac{-2b \cos \theta \sin \theta - a \sin^2 \theta + a \cos^2 \theta}{- 2a \cos \theta \sin \theta - b \sin^2 \theta + b \cos^2 \theta}
+\end{align*}
+
+Plugging in $\theta = 0$, we get $\frac{dy}{dx}(0) = \frac{a}{b}$. Thus the slope of the tangent line at the point where $\theta = 0$ is $\boxed{\frac{a}{b}}$.
