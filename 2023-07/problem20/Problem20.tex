@@ -1,0 +1,26 @@
+Problem 20: Describe the graph of $r = a + b \sin \theta$, where $a$ and $b$ are positive real numbers, and find the slope of the tangent line at the point where $\theta = \dfrac{\pi}{2}$. (Source: AoPS Calculus)
+
+The graph of $r = a + b \sin \theta$ is a limacon, which resembles a circle but has a loop around the origin.
+
+When $0 \leq \theta \leq \pi$, the magnitude $r(\theta)$ is always positive. But when $\pi < \theta < 2\pi$, the magnitude $r(\theta)$ can be positive or negative.. The loop around the origin is caused by a sub-interval of $(\pi, 2\pi)$ where $r(\theta) < 0$.
+
+We would like to know the slope of the tangent line at the point where $\theta = \dfrac{\pi}{2}$. To find this slope we will differentiate the parametric equations $x = r \cos \theta = a \cos \theta + b \cos \theta \sin \theta$ and $y = r \sin \theta = a \sin \theta + b \sin^2 \theta$.
+
+\begin{align*}
+\frac{dy}{d\theta} &= a \cos \theta + 2b \sin \theta \cos \theta \\
+\frac{dx}{d\theta} &= -a \sin \theta + -b \sin^2 \theta + b \cos^2 \theta
+\end{align*}
+
+Now we can get the slope of the tangent line, since $\frac{dy}{dx} = \frac{dy/d\theta}{dx/d\theta}$.
+
+\begin{align*}
+\frac{dy}{dx} &= \frac{dy/d\theta}{dx/d\theta} \\
+&= \frac{a \cos \theta + 2b \sin \theta \cos \theta}{-a \sin \theta + -b \sin^2 \theta + b \cos^2 \theta}
+\end{align*}
+
+Plugging in $\theta = \frac{\pi}{2}$, we get
+
+
+$$ \frac{dy}{dx} \left( \frac{\pi}{2} \right) = \frac{0}{-a + -b} = \boxed{0} $$
+
+The slope of the tangent line at the point where $\theta = \dfrac{\pi}{2}$ is $\boxed{0}$.
