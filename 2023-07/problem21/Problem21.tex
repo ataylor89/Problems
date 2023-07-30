@@ -1,0 +1,41 @@
+Problem 21: Describe the graph of $r = 1 - \sin 2\theta$, and find the slope of the tangent line at the origin. (Source: AoPS Calculus)
+
+The polar equation $r = 1 - \sin 2\theta$ is the graph of a figure eight rotated forty five degrees counter-clockwise. We can find the polar coordinates of the origin by setting $r = 0$ and solving for $\theta$.
+
+\begin{align*}
+r &= 1 - \sin 2\theta \\
+0 &= 1 - \sin 2\theta \\
+1 &= \sin 2\theta \\
+\arcsin 1 &= 2 \theta \\
+\frac{\pi}{2} &= 2 \theta \\
+\theta &= \frac{\pi}{4}
+\end{align*}
+
+Thus the polar coordinates of the origin are $\left(0, \frac{\pi}{4}\right)$.
+
+Now let's get an equation for the slope of the tangent line in terms of $\theta$. 
+
+\begin{align*}
+y &= r \sin \theta \\
+&= (1 - \sin 2\theta) \sin \theta \\
+&= \sin \theta - \sin \theta \sin 2\theta \\
+\frac{dy}{d\theta} &= \cos \theta - \cos \theta \sin 2\theta - 2 \sin \theta \cos 2\theta \\
+x &= r \cos \theta \\
+&= (1 - \sin 2\theta) \cos \theta \\
+&= \cos \theta - \cos \theta \sin 2\theta \\
+\frac{dx}{d\theta} &= -\sin \theta + \sin \theta \sin 2\theta - 2 \cos \theta \cos 2\theta \\
+\end{align*}
+
+Since $\frac{dy}{d\theta} = \frac{dx}{d\theta} = 0$ at $\theta = \frac{\pi}{4}$, we have to take the limit of $\frac{dy/d\theta}{dx/d\theta}$ as $\theta$ approaches $\frac{\pi}{4}$.
+
+\begin{align*}
+\frac{dy}{dx} &= \lim_{\theta \rightarrow \frac{\pi}{4}} \frac{dy/d\theta}{dx/d\theta} \\
+&=  \lim_{\theta \rightarrow \frac{\pi}{4}} \frac{-\sin \theta - (-\sin \theta \sin 2\theta + 2 \cos \theta \cos 2\theta) - (2 \cos \theta \cos 2\theta - 4 \sin \theta \sin 2\theta)}{-\cos \theta + (\cos \theta \sin 2\theta + 2 \sin \theta \cos 2\theta) - (-2 \sin \theta \cos 2\theta - 4 \cos \theta \sin 2\theta)} \\
+&= \lim_{\theta \rightarrow \frac{\pi}{4}} \frac{-\sin \theta - (-\sin \theta \sin 2\theta) - (-4 \sin \theta \sin 2\theta)}{-\cos \theta + (\cos \theta \sin 2\theta) - (- 4 \cos \theta \sin 2\theta)} \\
+&= \lim_{\theta \rightarrow \frac{\pi}{4}} \frac{-\sin \theta + \sin \theta \sin 2\theta + 4 \sin \theta \sin 2\theta}{-\cos \theta + \cos \theta \sin 2\theta + 4 \cos \theta \sin 2\theta} \\
+&= \lim_{\theta \rightarrow \frac{\pi}{4}} \frac{-\sin \theta + \sin \theta + 4 \sin \theta}{-\cos \theta + \cos \theta + 4 \cos \theta} \\
+&= \lim_{\theta \rightarrow \frac{\pi}{4}} \frac{\sin \theta}{\cos \theta} \\
+&= \boxed{1}
+\end{align*}
+
+Thus the slope of the tangent line at the origin is $\boxed{1}$.
