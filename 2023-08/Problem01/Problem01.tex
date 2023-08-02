@@ -1,0 +1,35 @@
+Problem 1: Find the area of one leaf of the rose given by $r = 3 \sin 2\theta$. (Source: AoPS Calculus)
+
+We can divide the leaf into a number of small sectors, where each sector has an area of $\dfrac{d\theta}{2\pi} (\pi r^2)$. We can integrate this expression from $\theta = 0$ to $\theta = \dfrac{\pi}{2}$ to get the area of the leaf.
+
+\begin{align*}
+\int_0^{\frac{\pi}{2}} (\pi r^2) \, \dfrac{d\theta}{2\pi} 
+&= \frac{1}{2} \int_0^{\frac{\pi}{2}} r^2 \, d\theta \\
+&= \frac{1}{2} \int_0^{\frac{\pi}{2}} (3 \sin 2\theta)^2 \, d\theta \\
+&= \frac{1}{2} \int_0^{\frac{\pi}{2}} 9 \sin^2 2\theta \, d\theta \\
+&= \frac{9}{2} \int_0^{\frac{\pi}{2}} \sin^2 2\theta \, d\theta
+\end{align*}
+
+Now we are going to prove a trig identity that lets us integrate $\sin^2 2\theta$.
+
+\begin{align*}
+\cos 2x &= \cos^2 x - \sin^2 x \\
+\sin^2x &= \cos^2 x - \cos 2x \\
+\sin^2x &= (1 - \sin^2 x) - \cos 2x \\
+2 \sin^2 x &= 1 - \cos 2x \\
+\sin^2 x &= \frac{1}{2} (1 - \cos 2x)
+\end{align*}
+
+Let $u = 2\theta$. Then $\dfrac{du}{d\theta} = 2$.
+
+\begin{align*}
+\int_0^{\frac{\pi}{2}} (\pi r^2) \, \dfrac{d\theta}{2\pi}
+&= \frac{9}{2} \int_0^{\frac{\pi}{2}} \sin^2 2\theta \, d\theta \\
+&= \frac{9}{2} \int_0^{\pi} \sin^2 u \, \frac{du}{2} \\
+&= \frac{9}{4} \int_0^{\pi} \sin^2 u \, du \\
+&= \frac{9}{4} \int_0^{\pi} \frac{1}{2} (1 - \cos 2u) \, du \\
+&= \frac{9}{8} \int_0^{\pi} (1 - \cos 2u) \, du \\
+&= \frac{9}{8} \int_0^{\pi} (1 - \cos 2u) \, du \\
+&= \frac{9}{8} (u - \frac{1}{2} \sin 2u) \Bigg|_0^\pi \\
+&= \boxed{\frac{9\pi}{8}}
+\end{align*}
