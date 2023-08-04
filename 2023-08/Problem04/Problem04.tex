@@ -1,0 +1,55 @@
+Problem 4: Find the shaded area, shown at right, inside the limacon given by the graph of $r = 1 + 2 \sin \theta$. (Source: AoPS Calculus)
+
+First we will compute the area of the non-shaded region. We can solve the inequality $r \leq 0$ for $\theta$ to get the bounds we need for integration.
+
+\begin{align*}
+1 + 2 \sin \theta \leq 0 \\
+2 \sin \theta \leq -1 \\
+\sin \theta \leq -\frac{1}{2} \\
+\frac{7\pi}{6} \leq \theta \leq \frac{11\pi}{6}
+\end{align*}
+
+Now we can integrate from $\theta = \dfrac{7\pi}{6}$ to $\dfrac{11\pi}{6}$ to get the area of the non-shaded region.
+
+\begin{align*}
+A_{ns} &= \frac{1}{2} \int_{\frac{7\pi}{6}}^{\frac{11\pi}{6}} r^2 \, d\theta \\ 
+&= \frac{1}{2} \int_{\frac{7\pi}{6}}^{\frac{11\pi}{6}} (1 + 2 \sin \theta)^2 \, d\theta \\ 
+&= \frac{1}{2} \int_{\frac{7\pi}{6}}^{\frac{11\pi}{6}} (1 + 4 \sin \theta + 4 \sin ^2 \theta) \, d\theta \\ 
+&= \frac{1}{2} \int_{\frac{7\pi}{6}}^{\frac{11\pi}{6}} (1 + 4 \sin \theta + 4(\frac{1}{2}(1 - \cos 2\theta)) \, d\theta \\ 
+&= \frac{1}{2} \int_{\frac{7\pi}{6}}^{\frac{11\pi}{6}} (1 + 4 \sin \theta + 2(1 - \cos 2\theta)) \, d\theta \\ 
+&= \frac{1}{2} \int_{\frac{7\pi}{6}}^{\frac{11\pi}{6}} (1 + 4 \sin \theta + 2 - 2 \cos 2\theta) \, d\theta \\ 
+&= \frac{1}{2} \left(\theta - 4 \cos \theta + 2\theta - 2 (\frac{1}{2} \sin 2\theta) \right) \Bigg|_{\frac{7\pi}{6}}^{\frac{11\pi}{6}} \\ 
+&= \frac{1}{2} \left(\theta - 4 \cos \theta + 2\theta - \sin 2\theta \right) \Bigg|_{\frac{7\pi}{6}}^{\frac{11\pi}{6}} \\ 
+&= \frac{1}{2} \left(\frac{11\pi}{6}- 4(\frac{\sqrt 3}{2}) + 2(\frac{11\pi}{6}) - \sin \frac{22\pi}{6} \right) - \frac{1}{2} \left(\frac{7\pi}{6}- 4(-\frac{\sqrt 3}{2}) + 2(\frac{7\pi}{6}) - \sin \frac{14\pi}{6} \right) \\
+&= \frac{1}{2} \left(\frac{11\pi}{6} - 2\sqrt{3} + \frac{22\pi}{6} + \frac{\sqrt3}{2} \right) - \frac{1}{2} \left(\frac{7\pi}{6} + 2\sqrt{3} + \frac{14\pi}{6} - \frac{\sqrt 3}{2} \right) \\ 
+&= \frac{1}{2} \left(\frac{4\pi}{6} - 4\sqrt{3} + \frac{8\pi}{6} + \sqrt 3 \right) \\
+&= \frac{1}{2} \left(\frac{12\pi}{6} - 3\sqrt{3} \right) \\
+&= \pi - \frac{3 \sqrt 3}{2}
+\end{align*}
+
+To get the area inside the limacon, we can just integrate from $\theta = -\dfrac{\pi}{6}$ to $\dfrac{7\pi}{6}$.
+
+\begin{align*}
+A_{l} &= \frac{1}{2} \int_{-\frac{\pi}{6}}^{\frac{7\pi}{6}} r^2 \, d\theta \\ 
+&= \frac{1}{2} \int_{-\frac{\pi}{6}}^{\frac{7\pi}{6}} (1 + 2 \sin \theta)^2 \, d\theta \\
+&= \frac{1}{2} \int_{-\frac{\pi}{6}}^{\frac{7\pi}{6}} (1 + 4 \sin \theta + 4 \sin ^2 \theta) \, d\theta \\
+&= \frac{1}{2} \int_{-\frac{\pi}{6}}^{\frac{7\pi}{6}} (1 + 4 \sin \theta + 4(\frac{1}{2}(1 - \cos 2\theta)) \, d\theta \\
+&= \frac{1}{2} \int_{-\frac{\pi}{6}}^{\frac{7\pi}{6}} (1 + 4 \sin \theta + 2(1 - \cos 2\theta)) \, d\theta \\
+&= \frac{1}{2} \int_{-\frac{\pi}{6}}^{\frac{7\pi}{6}} (1 + 4 \sin \theta + 2 - 2\cos 2\theta) \, d\theta \\
+&= \frac{1}{2} \left(\theta - 4 \cos \theta + 2\theta - 2 (\frac{1}{2} \sin 2\theta) \right) \Bigg|_{-\frac{\pi}{6}}^{\frac{7\pi}{6}} \\ 
+&= \frac{1}{2} \left(\theta - 4 \cos \theta + 2\theta - \sin 2\theta \right) \Bigg|_{-\frac{\pi}{6}}^{\frac{7\pi}{6}} \\
+&= \frac{1}{2} \left(\frac{7\pi}{6} + 2\sqrt3 + \frac{14\pi}{6} - \frac{\sqrt 3}{2} \right) - \frac{1}{2} \left(- \frac{\pi}{6} - 2\sqrt3 - \frac{2\pi}{6} + \frac{\sqrt 3}{2} \right) \\
+&= \frac{1}{2} \left(\frac{21\pi}{6} + \frac{3\sqrt 3}{2} \right) - \frac{1}{2} \left(-\frac{3\pi}{6} - \frac{3\sqrt 3}{2} \right) \\ 
+&= \frac{1}{2} \left(\frac{21\pi}{6} + \frac{3\sqrt 3}{2} + \frac{3\pi}{6} + \frac{3\sqrt 3}{2} \right) \\ 
+&= \frac{1}{2} \left(\frac{24\pi}{6} + 3 \sqrt 3 \right) \\ 
+&= \frac{1}{2} \left(4\pi + 3 \sqrt 3 \right) \\ 
+&= 2\pi + \frac{3 \sqrt 3}{2} \\ 
+\end{align*}
+
+To get the area of the shaded region, we subtract the area of the non-shaded region from the area inside the limacon.
+
+\begin{align*}
+A_s &= A_l - A_{ns} \\
+&= \left(2\pi + \frac{3 \sqrt 3}{2}\right) - \left(\pi - \frac{3 \sqrt 3}{2}\right) \\
+&= \boxed{\pi + 3 \sqrt 3}
+\end{align*}
