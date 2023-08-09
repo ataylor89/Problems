@@ -1,0 +1,22 @@
+Problem 10: The Archimedes spiral is the graph of $r = \theta$ for $\theta \geq 0$. Find the slope of the tangent line to the spiral at $\theta$. (Source: AoPS Calculus)
+
+We have 
+
+\begin{align*}
+& y = r \sin \theta = \theta \sin \theta \\
+& x = r \cos \theta = \theta \cos \theta
+\end{align*}
+
+Taking the derivative with respect to $\theta$, we get
+
+\begin{align*}
+\frac{dy}{d\theta} &= \sin \theta + \theta \cos \theta \\
+\frac{dx}{d\theta} &= \cos \theta - \theta \sin \theta
+\end{align*}
+
+Now we can write the slope of the tangent line as a function of $\theta$.
+
+\begin{align*}
+\frac{dy}{dx} &= \frac{\frac{dy}{d\theta}}{\frac{dx}{d\theta}} \\
+&= \boxed{\frac{\sin \theta + \theta \cos \theta}{\cos \theta - \theta \sin \theta}}
+\end{align*}
