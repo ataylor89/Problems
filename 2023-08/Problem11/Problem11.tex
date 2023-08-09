@@ -1,0 +1,16 @@
+Problem 11: The Archimedes spiral is the graph of $r = \theta$ for $\theta \geq 0$. Find the area of the region bounded by the spiral and to the left of the y-axis when $0 \leq \theta \leq 2\pi$. (Source: AoPS Calculus)
+
+The region is bounded by $\theta = \dfrac{\pi}{2}$, $\theta = \dfrac{3\pi}{2}$, and the curve $r = \theta$. We can integrate from $\theta = \dfrac{\pi}{2}$ to $\theta = \dfrac{3\pi}{2}$.
+
+\begin{align*}
+A &= \int_{\pi/2}^{3\pi/2} (\pi r^2) \, \frac{d\theta}{2\pi} \\
+&= \frac{1}{2} \int_{\pi/2}^{3\pi/2} r^2 \, d\theta \\
+&= \frac{1}{2} \int_{\pi/2}^{3\pi/2} \theta^2 \, d\theta \\
+&= \frac{1}{2} \left( \frac{1}{3} \theta^3 \Bigg|_{\pi/2}^{3\pi/2} \right) \\
+&= \frac{1}{2} \left( \frac{1}{3} (3\pi/2)^3 - \frac{1}{3} (\pi/2)^3 \right) \\
+&= \frac{1}{6} \left( (3\pi/2)^3 - (\pi/2)^3 \right) \\
+&= \frac{1}{6} \left( 27\pi^3/8 - \pi^3/8 \right) \\
+&= \frac{1}{6} \cdot \frac{26\pi^3}{8} \\
+&= \frac{1}{6} \cdot \frac{13\pi^3}{4} \\
+&= \boxed{\frac{13\pi^3}{24}}
+\end{align*}
