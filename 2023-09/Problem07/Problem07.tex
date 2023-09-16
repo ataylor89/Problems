@@ -1,0 +1,16 @@
+Problem 7: Find the range of \[f(A) = \frac{\sin A (3 \cos^2 A + \cos^4 A + 3 \sin^2 A + \sin^2 A \cos^2 A)}{\tan A (\sec A - \sin A \tan A)},\]where $A$ is not an integer multiple of $\pi/2$. (Source: AoPS Precalculus Ex 3.1.6 and HMMT)
+
+Solution:
+
+\begin{align*}
+f(A) &= \frac{\sin A (3 \cos^2 A + \cos^4 A + 3 \sin^2 A + \sin^2 A \cos^2 A)}{\tan A (\sec A - \sin A \tan A)} \\
+&= \frac{\cos A (3 \cos^2 A + \cos^4 A + 3 \sin^2 A + \sin^2 A \cos^2 A)}{\sec A - \sin A \tan A} \\
+&= \frac{\cos A (3 \cos^2 A + \cos^4 A + 3 \sin^2 A + \sin^2 A \cos^2 A)}{\frac{1 - \sin^2 A}{\cos A}} \\
+&= \frac{\cos A (3 \cos^2 A + \cos^4 A + 3 \sin^2 A + \sin^2 A \cos^2 A)}{\frac{\cos^2 A}{\cos A}} \\
+&= \frac{\cos A (3 \cos^2 A + \cos^4 A + 3 \sin^2 A + \sin^2 A \cos^2 A)}{\cos A} \\
+&= 3 \cos^2 A + \cos^4 A + 3 \sin^2 A + \sin^2 A \cos^2 A \\
+&= 3 (\cos^2 A + \sin^2 A) + \cos^2 A(\cos^2 A + \sin^2 A) \\
+&= 3 + \cos^2 A
+\end{align*}
+
+Since $A$ is not an integer multiple of $\frac{\pi}{2}$, we know that $\cos^2 A \in (0, 1)$. Thus $\boxed{f(A) \in (3, 4)}$.
