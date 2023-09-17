@@ -1,0 +1,14 @@
+Problem 8: Show that $\tan(\alpha - \beta) = \dfrac{\tan\alpha - \tan\beta}{1+\tan\alpha\tan \beta}$. (Source: AoPS Precalculus Ex 3.2.2)
+
+Solution:
+
+Assuming that $\tan \alpha$ and $\tan \beta$ are both defined, and $1 + \tan \alpha \tan \beta \neq 0$, we have:
+
+\begin{align*}
+\tan(\alpha - \beta) &= \frac{\sin(\alpha - \beta)}{\cos(\alpha - \beta)} \\
+&=\frac{\sin(\alpha) \cos(-\beta) + \cos(\alpha) \sin(-\beta)}{\cos(\alpha)\cos(-\beta) - \sin(\alpha)\sin(-\beta)} \\
+&= \frac{\sin(\alpha)\cos(\beta) - \cos(\alpha)\sin(\beta)}{\cos(\alpha)\cos(\beta) + \sin(\alpha)\sin(\beta)} \\
+&= \frac{\tan(\alpha)\cos(\alpha)\cos(\beta) - \tan(\beta)\cos(\alpha)\cos(\beta)}{\cos(\alpha)\cos(\beta) + \tan(\alpha)\tan(\beta)\cos(\alpha)\cos(\beta)} \\
+&= \frac{(\cos(\alpha)\cos(\beta))(\tan(\alpha) - \tan(\beta))}{(\cos(\alpha)\cos(\beta))(1 + \tan(\alpha)\tan(\beta))} \\
+&= \frac{\tan(\alpha) - \tan(\beta)}{1 + \tan(\alpha)\tan(\beta)}
+\end{align*}
